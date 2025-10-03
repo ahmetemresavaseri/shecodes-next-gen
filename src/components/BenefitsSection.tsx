@@ -1,88 +1,97 @@
 import { Code, Trophy, Briefcase, Award, Network, Lightbulb } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useState } from "react";
 
 export const BenefitsSection = () => {
+  const [activeTab, setActiveTab] = useState("participants");
+
   const participantBenefits = [
     {
       icon: Code,
-      title: "Hands-On Experience",
-      description: "Work on real-world projects and build your portfolio with cutting-edge technologies"
+      title: "XP_BOOST",
+      description: "GAIN HANDS-ON EXPERIENCE WITH REAL-WORLD PROJECTS && BUILD YOUR PORTFOLIO"
     },
     {
       icon: Network,
-      title: "Networking",
-      description: "Connect with industry leaders, mentors, and fellow talented women in tech"
+      title: "CONNECT()",
+      description: "NETWORK WITH INDUSTRY LEADERS, MENTORS AND FELLOW TECH WARRIORS"
     },
     {
       icon: Trophy,
-      title: "Win Prizes",
-      description: "Compete for amazing prizes, recognition, and career opportunities"
+      title: "LOOT_PRIZES",
+      description: "COMPETE FOR EPIC PRIZES, ACHIEVEMENTS AND CAREER POWER-UPS"
     },
     {
       icon: Lightbulb,
-      title: "Learn & Grow",
-      description: "Access workshops, mentorship sessions, and resources to accelerate your skills"
+      title: "LEVEL_UP",
+      description: "ACCESS WORKSHOPS && MENTORSHIP TO ACCELERATE YOUR SKILL TREE"
     }
   ];
 
   const companyBenefits = [
     {
       icon: Briefcase,
-      title: "Top Talent",
-      description: "Access a curated pool of skilled women developers ready to make an impact"
+      title: "RECRUIT_MODE",
+      description: "ACCESS POOL OF SKILLED WOMEN DEVELOPERS READY TO JOIN YOUR TEAM"
     },
     {
       icon: Award,
-      title: "Diversity Goals",
-      description: "Build a more diverse and innovative team aligned with modern workplace values"
+      title: "DIVERSITY++",
+      description: "BUILD A MORE DIVERSE TEAM ALIGNED WITH MODERN VALUES"
     },
     {
       icon: Users,
-      title: "Brand Visibility",
-      description: "Showcase your company as a champion of diversity and inclusion in tech"
+      title: "BRAND_XP",
+      description: "SHOWCASE AS CHAMPION OF DIVERSITY && INCLUSION IN TECH"
     },
     {
       icon: Network,
-      title: "Direct Engagement",
-      description: "Interact with potential hires in a collaborative, pressure-free environment"
+      title: "DIRECT_LINK",
+      description: "INTERACT WITH POTENTIAL HIRES IN COLLABORATIVE ENVIRONMENT"
     }
   ];
 
   return (
-    <section className="py-24 px-4">
+    <section className="py-24 px-4 scanlines">
       <div className="container mx-auto">
-        <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Benefits For Everyone
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-pixel mb-4 pixel-text">
+            BENEFITS.LOG
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Whether you're a participant or a company, we create value for all
+          <p className="text-xs text-muted-foreground">
+            &gt; VALUE_FOR_ALL = TRUE
           </p>
         </div>
 
-        <Tabs defaultValue="participants" className="max-w-6xl mx-auto">
-          <TabsList className="grid w-full grid-cols-2 mb-12">
-            <TabsTrigger value="participants" className="text-lg py-4">
-              For Participants
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="max-w-6xl mx-auto">
+          <TabsList className="grid w-full grid-cols-2 mb-12 pixel-border bg-card p-2">
+            <TabsTrigger 
+              value="participants" 
+              className="font-pixel text-xs data-[state=active]:bg-primary data-[state=active]:text-background"
+            >
+              PLAYERS
             </TabsTrigger>
-            <TabsTrigger value="companies" className="text-lg py-4">
-              For Companies
+            <TabsTrigger 
+              value="companies" 
+              className="font-pixel text-xs data-[state=active]:bg-secondary data-[state=active]:text-background"
+            >
+              SPONSORS
             </TabsTrigger>
           </TabsList>
 
           <TabsContent value="participants" className="animate-fade-in">
             <div className="grid md:grid-cols-2 gap-6">
               {participantBenefits.map((benefit, index) => (
-                <Card key={index} className="border-border hover:border-primary/50 transition-colors">
+                <Card key={index} className="pixel-border bg-card hover:bg-primary/10 transition-all group cursor-pointer">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center flex-shrink-0">
-                        <benefit.icon className="w-6 h-6 text-primary-foreground" />
+                      <div className="w-12 h-12 pixel-border bg-primary flex items-center justify-center flex-shrink-0 group-hover:animate-pixel-bounce">
+                        <benefit.icon className="w-6 h-6 text-background" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-                        <p className="text-muted-foreground">{benefit.description}</p>
+                        <h3 className="text-sm font-pixel mb-2 text-primary">{benefit.title}</h3>
+                        <p className="text-xs text-muted-foreground font-mono">{benefit.description}</p>
                       </div>
                     </div>
                   </CardContent>
@@ -94,15 +103,15 @@ export const BenefitsSection = () => {
           <TabsContent value="companies" className="animate-fade-in">
             <div className="grid md:grid-cols-2 gap-6">
               {companyBenefits.map((benefit, index) => (
-                <Card key={index} className="border-border hover:border-secondary/50 transition-colors">
+                <Card key={index} className="pixel-border bg-card hover:bg-secondary/10 transition-all group cursor-pointer">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-lg bg-gradient-secondary flex items-center justify-center flex-shrink-0">
-                        <benefit.icon className="w-6 h-6 text-secondary-foreground" />
+                      <div className="w-12 h-12 pixel-border bg-secondary flex items-center justify-center flex-shrink-0 group-hover:animate-pixel-bounce">
+                        <benefit.icon className="w-6 h-6 text-background" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-                        <p className="text-muted-foreground">{benefit.description}</p>
+                        <h3 className="text-sm font-pixel mb-2 text-secondary">{benefit.title}</h3>
+                        <p className="text-xs text-muted-foreground font-mono">{benefit.description}</p>
                       </div>
                     </div>
                   </CardContent>

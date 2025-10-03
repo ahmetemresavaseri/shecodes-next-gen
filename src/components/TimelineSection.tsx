@@ -1,86 +1,86 @@
-import { Calendar, CheckCircle2 } from "lucide-react";
+import { Calendar, CheckCircle2, Square } from "lucide-react";
 
 export const TimelineSection = () => {
   const timeline = [
     {
-      phase: "Registration",
-      title: "Sign Up & Team Formation",
-      description: "Register individually or as a team. Network with other participants to form your dream team.",
+      phase: "INIT",
+      title: "REGISTER && TEAM_UP",
+      description: "SIGN_UP() INDIVIDUALLY OR AS TEAM. NETWORK TO FORM YOUR SQUAD",
       status: "open"
     },
     {
-      phase: "Kickoff",
-      title: "Opening Ceremony & Theme Reveal",
-      description: "Join us for the exciting opening ceremony where we'll reveal this year's hackathon theme.",
+      phase: "START",
+      title: "OPENING_CEREMONY.EXE",
+      description: "JOIN US FOR KICKOFF WHERE WE REVEAL THIS YEAR'S THEME",
       status: "upcoming"
     },
     {
-      phase: "Hack Time",
-      title: "48 Hours of Innovation",
-      description: "Code, design, and build your solution. Access mentors, workshops, and resources throughout.",
+      phase: "LOOP",
+      title: "48H_INNOVATION_CYCLE",
+      description: "CODE, DESIGN && BUILD YOUR SOLUTION. ACCESS MENTORS 24/7",
       status: "upcoming"
     },
     {
-      phase: "Presentations",
-      title: "Demo Day & Judging",
-      description: "Present your projects to our panel of industry experts and compete for amazing prizes.",
+      phase: "DEMO",
+      title: "PRESENTATION_MODE",
+      description: "PRESENT YOUR PROJECT TO JUDGES && COMPETE FOR PRIZES",
       status: "upcoming"
     },
     {
-      phase: "Closing",
-      title: "Awards & Networking",
-      description: "Celebrate achievements, receive awards, and connect with companies looking to hire.",
+      phase: "END",
+      title: "AWARDS && NETWORK",
+      description: "CELEBRATE ACHIEVEMENTS && CONNECT WITH RECRUITING COMPANIES",
       status: "upcoming"
     }
   ];
 
   return (
-    <section className="py-24 px-4 bg-muted/30">
+    <section className="py-24 px-4 relative scanlines">
       <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            How It Works
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-pixel mb-4 pixel-text glitch">
+            GAME_FLOW
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Your journey from registration to career opportunities
+          <p className="text-xs text-muted-foreground">
+            &gt; HOW_TO_PLAY.TXT
           </p>
         </div>
 
-        <div className="relative">
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-primary" />
-          
-          <div className="space-y-12">
-            {timeline.map((item, index) => (
-              <div
-                key={index}
-                className="relative pl-20 animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="absolute left-0 w-16 h-16 rounded-full bg-card border-4 border-background shadow-card flex items-center justify-center">
-                  {item.status === "open" ? (
-                    <CheckCircle2 className="w-8 h-8 text-primary" />
-                  ) : (
-                    <Calendar className="w-8 h-8 text-muted-foreground" />
+        <div className="space-y-8">
+          {timeline.map((item, index) => (
+            <div
+              key={index}
+              className="relative pl-20 animate-fade-in-up"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <div className="absolute left-0 w-16 h-16 pixel-border bg-card flex items-center justify-center hover:animate-pixel-bounce">
+                {item.status === "open" ? (
+                  <CheckCircle2 className="w-8 h-8 text-primary" />
+                ) : (
+                  <Square className="w-6 h-6 text-muted-foreground" />
+                )}
+              </div>
+              
+              <div className="pixel-border bg-card p-6 hover:bg-primary/5 transition-all group cursor-pointer">
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="text-xs font-pixel text-primary">
+                    [{item.phase}]
+                  </span>
+                  {item.status === "open" && (
+                    <span className="px-2 py-1 text-xs font-pixel bg-primary text-background animate-blink">
+                      ACTIVE
+                    </span>
                   )}
                 </div>
-                
-                <div className="bg-card rounded-xl p-6 border border-border hover:border-primary/50 transition-colors shadow-card">
-                  <div className="flex items-center gap-3 mb-2">
-                    <span className="text-sm font-semibold text-primary uppercase tracking-wide">
-                      {item.phase}
-                    </span>
-                    {item.status === "open" && (
-                      <span className="px-2 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">
-                        Open Now
-                      </span>
-                    )}
-                  </div>
-                  <h3 className="text-2xl font-semibold mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.description}</p>
-                </div>
+                <h3 className="text-base font-pixel mb-2 group-hover:text-primary transition-colors">{item.title}</h3>
+                <p className="text-xs text-muted-foreground font-mono">{item.description}</p>
               </div>
-            ))}
-          </div>
+              
+              {index < timeline.length - 1 && (
+                <div className="absolute left-7 top-20 w-0.5 h-8 bg-primary" />
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>

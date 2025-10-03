@@ -1,33 +1,54 @@
 import { Target, Users, Rocket } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 export const MissionSection = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-scale-in");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const cards = sectionRef.current?.querySelectorAll(".mission-card");
+    cards?.forEach((card) => observer.observe(card));
+
+    return () => observer.disconnect();
+  }, []);
+
   const values = [
     {
       icon: Target,
-      title: "Our Mission",
-      description: "Breaking barriers and creating opportunities for women to thrive in technology through hands-on collaboration and mentorship."
+      title: "MISSION_01",
+      description: "BREAK_BARRIERS() && CREATE_OPPORTUNITIES() FOR WOMEN IN TECH THROUGH HANDS-ON COLLABORATION"
     },
     {
       icon: Users,
-      title: "Community First",
-      description: "Building a supportive network of talented women developers, designers, and innovators who lift each other up."
+      title: "MISSION_02", 
+      description: "BUILD_COMMUNITY() OF TALENTED DEVELOPERS, DESIGNERS AND INNOVATORS WHO SUPPORT EACH OTHER"
     },
     {
       icon: Rocket,
-      title: "Career Growth",
-      description: "Connecting participants with leading tech companies actively seeking diverse talent to strengthen their teams."
+      title: "MISSION_03",
+      description: "CONNECT(PARTICIPANTS, COMPANIES) TO CREATE CAREER OPPORTUNITIES AND GROWTH"
     }
   ];
 
   return (
-    <section className="py-24 px-4 bg-muted/30">
+    <section ref={sectionRef} className="py-24 px-4 relative scanlines">
       <div className="container mx-auto">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Why We Exist
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-pixel mb-4 pixel-text glitch">
+            WHY_WE_EXIST
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Bridging the gender gap in technology, one hackathon at a time
+          <p className="text-sm text-muted-foreground">
+            &gt; MISSION_STATEMENT.TXT
           </p>
         </div>
         
@@ -35,14 +56,14 @@ export const MissionSection = () => {
           {values.map((value, index) => (
             <div
               key={index}
-              className="group p-8 rounded-2xl bg-card border border-border hover:border-primary/50 shadow-card hover:shadow-glow transition-all duration-300 animate-fade-in-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="mission-card group pixel-border bg-card p-6 hover:bg-primary/10 transition-all cursor-pointer"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="w-16 h-16 rounded-xl bg-gradient-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <value.icon className="w-8 h-8 text-primary-foreground" />
+              <div className="w-16 h-16 pixel-border bg-primary flex items-center justify-center mb-6 group-hover:animate-pixel-bounce">
+                <value.icon className="w-8 h-8 text-background" />
               </div>
-              <h3 className="text-2xl font-semibold mb-4">{value.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <h3 className="text-lg font-pixel mb-4 text-primary">{value.title}</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed font-mono">
                 {value.description}
               </p>
             </div>
