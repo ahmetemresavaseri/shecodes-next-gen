@@ -8,46 +8,45 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 220 30% 10%;
-    --foreground: 120 100% 80%;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 15%;
 
-    --card: 220 25% 15%;
-    --card-foreground: 120 100% 80%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 15%;
 
-    --popover: 220 25% 15%;
-    --popover-foreground: 120 100% 80%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 15%;
 
-    --primary: 120 100% 50%;
-    --primary-foreground: 220 30% 10%;
-    --primary-glow: 120 100% 70%;
+    --primary: 330 85% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 330 85% 70%;
 
-    --secondary: 180 100% 50%;
-    --secondary-foreground: 220 30% 10%;
+    --secondary: 280 70% 65%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 20% 25%;
-    --muted-foreground: 120 50% 60%;
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
 
-    --accent: 320 100% 50%;
-    --accent-foreground: 220 30% 10%;
+    --accent: 200 80% 60%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 100% 50%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 120 100% 50%;
-    --input: 220 20% 20%;
-    --ring: 120 100% 50%;
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 330 85% 60%;
 
-    --radius: 0px;
+    --radius: 0.5rem;
     
-    --gradient-primary: linear-gradient(135deg, hsl(120 100% 50%), hsl(180 100% 50%));
-    --gradient-secondary: linear-gradient(135deg, hsl(180 100% 50%), hsl(320 100% 50%));
-    --gradient-hero: linear-gradient(180deg, hsl(220 30% 10%), hsl(280 40% 15%));
+    --gradient-primary: linear-gradient(135deg, hsl(330 85% 60%), hsl(280 70% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(280 70% 65%), hsl(200 80% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(330 85% 60%), hsl(280 70% 65%));
     
-    --shadow-glow: 0 0 20px hsla(120 100% 50% / 0.6), 0 0 40px hsla(120 100% 50% / 0.4);
-    --shadow-card: 4px 4px 0px hsl(120 100% 50%);
-    --shadow-pixel: 2px 2px 0px hsl(120 100% 50%);
+    --shadow-glow: 0 0 30px hsla(330 85% 60% / 0.3);
+    --shadow-card: 0 10px 30px -5px hsla(330 85% 60% / 0.2);
     
-    --transition-smooth: all 0.1s steps(2);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -67,10 +66,17 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 220 30% 5%;
-    --foreground: 120 100% 80%;
+    --background: 240 10% 10%;
+    --foreground: 0 0% 95%;
     
-    --shadow-glow: 0 0 30px hsla(120 100% 50% / 0.8), 0 0 60px hsla(120 100% 50% / 0.5);
+    --card: 240 10% 13%;
+    --card-foreground: 0 0% 95%;
+    
+    --muted: 240 10% 20%;
+    --muted-foreground: 240 5% 65%;
+    
+    --shadow-glow: 0 0 40px hsla(330 85% 60% / 0.4);
+    --shadow-card: 0 10px 40px -5px hsla(330 85% 60% / 0.3);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -88,63 +94,35 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-pixel;
-    image-rendering: pixelated;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: crisp-edges;
+    @apply bg-background text-foreground font-sans;
   }
   
-  .pixel-text {
-    text-shadow: 2px 2px 0px hsl(var(--primary));
-  }
-  
-  .glitch {
-    animation: glitch 1s infinite;
-  }
-  
-  @keyframes glitch {
-    0%, 90%, 100% {
-      transform: translate(0);
-    }
-    92% {
-      transform: translate(-2px, 2px);
-    }
-    94% {
-      transform: translate(2px, -2px);
-    }
-    96% {
-      transform: translate(-2px, -2px);
-    }
-    98% {
-      transform: translate(2px, 2px);
-    }
-  }
-  
-  .pixel-border {
-    border: 4px solid hsl(var(--border));
-    box-shadow: var(--shadow-card);
-  }
-  
-  .scanlines {
+  .shine-dot {
     position: relative;
-    overflow: hidden;
+    display: inline-block;
   }
   
-  .scanlines::before {
+  .shine-dot::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: repeating-linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.15),
-      rgba(0, 0, 0, 0.15) 1px,
-      transparent 1px,
-      transparent 2px
-    );
-    pointer-events: none;
-    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, hsl(var(--primary)) 0%, transparent 70%);
+    animation: shine 2s ease-in-out infinite;
+    opacity: 0;
+  }
+  
+  @keyframes shine {
+    0%, 100% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+    50% {
+      opacity: 0.8;
+      transform: translate(-50%, -50%) scale(1.5);
+    }
   }
 }

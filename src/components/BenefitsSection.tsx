@@ -1,4 +1,4 @@
-import { Code, Trophy, Briefcase, Award, Network, Lightbulb } from "lucide-react";
+import { Code, Trophy, Briefcase, Award, Network, Lightbulb, Users } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
@@ -9,89 +9,83 @@ export const BenefitsSection = () => {
   const participantBenefits = [
     {
       icon: Code,
-      title: "XP_BOOST",
-      description: "GAIN HANDS-ON EXPERIENCE WITH REAL-WORLD PROJECTS && BUILD YOUR PORTFOLIO"
+      title: "Hands-On Experience",
+      description: "Build real-world projects and expand your portfolio with innovative solutions"
     },
     {
       icon: Network,
-      title: "CONNECT()",
-      description: "NETWORK WITH INDUSTRY LEADERS, MENTORS AND FELLOW TECH WARRIORS"
+      title: "Professional Network",
+      description: "Connect with industry leaders, mentors and fellow tech professionals"
     },
     {
       icon: Trophy,
-      title: "LOOT_PRIZES",
-      description: "COMPETE FOR EPIC PRIZES, ACHIEVEMENTS AND CAREER POWER-UPS"
+      title: "Prizes & Recognition",
+      description: "Compete for amazing prizes, gain recognition and boost your career"
     },
     {
       icon: Lightbulb,
-      title: "LEVEL_UP",
-      description: "ACCESS WORKSHOPS && MENTORSHIP TO ACCELERATE YOUR SKILL TREE"
+      title: "Skill Development",
+      description: "Access workshops and mentorship to accelerate your learning journey"
     }
   ];
 
   const companyBenefits = [
     {
       icon: Briefcase,
-      title: "RECRUIT_MODE",
-      description: "ACCESS POOL OF SKILLED WOMEN DEVELOPERS READY TO JOIN YOUR TEAM"
+      title: "Talent Discovery",
+      description: "Access a pool of skilled women developers ready to join your team"
     },
     {
       icon: Award,
-      title: "DIVERSITY++",
-      description: "BUILD A MORE DIVERSE TEAM ALIGNED WITH MODERN VALUES"
+      title: "Diversity Goals",
+      description: "Build a more diverse team aligned with modern workplace values"
     },
     {
       icon: Users,
-      title: "BRAND_XP",
-      description: "SHOWCASE AS CHAMPION OF DIVERSITY && INCLUSION IN TECH"
+      title: "Brand Building",
+      description: "Showcase your commitment to diversity and inclusion in tech"
     },
     {
       icon: Network,
-      title: "DIRECT_LINK",
-      description: "INTERACT WITH POTENTIAL HIRES IN COLLABORATIVE ENVIRONMENT"
+      title: "Direct Engagement",
+      description: "Interact with potential hires in a collaborative environment"
     }
   ];
 
   return (
-    <section className="py-24 px-4 scanlines">
-      <div className="container mx-auto">
+    <section className="py-20 bg-muted/30">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-pixel mb-4 pixel-text">
-            BENEFITS.LOG
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-secondary bg-clip-text text-transparent">
+            Why Join Us
           </h2>
-          <p className="text-xs text-muted-foreground">
-            &gt; VALUE_FOR_ALL = TRUE
+          <p className="text-muted-foreground">
+            Value for everyone in our community
           </p>
         </div>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="max-w-6xl mx-auto">
-          <TabsList className="grid w-full grid-cols-2 mb-12 pixel-border bg-card p-2">
-            <TabsTrigger 
-              value="participants" 
-              className="font-pixel text-xs data-[state=active]:bg-primary data-[state=active]:text-background"
-            >
-              PLAYERS
+          <TabsList className="grid w-full grid-cols-2 mb-12 bg-card">
+            <TabsTrigger value="participants">
+              For Participants
             </TabsTrigger>
-            <TabsTrigger 
-              value="companies" 
-              className="font-pixel text-xs data-[state=active]:bg-secondary data-[state=active]:text-background"
-            >
-              SPONSORS
+            <TabsTrigger value="companies">
+              For Companies
             </TabsTrigger>
           </TabsList>
 
           <TabsContent value="participants" className="animate-fade-in">
             <div className="grid md:grid-cols-2 gap-6">
               {participantBenefits.map((benefit, index) => (
-                <Card key={index} className="pixel-border bg-card hover:bg-primary/10 transition-all group cursor-pointer">
+                <Card key={index} className="bg-card hover:shadow-glow transition-all group">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 pixel-border bg-primary flex items-center justify-center flex-shrink-0 group-hover:animate-pixel-bounce">
-                        <benefit.icon className="w-6 h-6 text-background" />
+                      <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                        <benefit.icon className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-sm font-pixel mb-2 text-primary">{benefit.title}</h3>
-                        <p className="text-xs text-muted-foreground font-mono">{benefit.description}</p>
+                        <h3 className="text-lg font-semibold mb-2 text-foreground">{benefit.title}</h3>
+                        <p className="text-sm text-muted-foreground">{benefit.description}</p>
                       </div>
                     </div>
                   </CardContent>
@@ -103,15 +97,15 @@ export const BenefitsSection = () => {
           <TabsContent value="companies" className="animate-fade-in">
             <div className="grid md:grid-cols-2 gap-6">
               {companyBenefits.map((benefit, index) => (
-                <Card key={index} className="pixel-border bg-card hover:bg-secondary/10 transition-all group cursor-pointer">
+                <Card key={index} className="bg-card hover:shadow-glow transition-all group">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 pixel-border bg-secondary flex items-center justify-center flex-shrink-0 group-hover:animate-pixel-bounce">
-                        <benefit.icon className="w-6 h-6 text-background" />
+                      <div className="w-12 h-12 rounded-lg bg-gradient-secondary flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                        <benefit.icon className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-sm font-pixel mb-2 text-secondary">{benefit.title}</h3>
-                        <p className="text-xs text-muted-foreground font-mono">{benefit.description}</p>
+                        <h3 className="text-lg font-semibold mb-2 text-foreground">{benefit.title}</h3>
+                        <p className="text-sm text-muted-foreground">{benefit.description}</p>
                       </div>
                     </div>
                   </CardContent>
@@ -124,9 +118,3 @@ export const BenefitsSection = () => {
     </section>
   );
 };
-
-const Users = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-  </svg>
-);

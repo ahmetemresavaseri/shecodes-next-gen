@@ -1,69 +1,50 @@
 import { Target, Users, Rocket } from "lucide-react";
-import { useEffect, useRef } from "react";
 
 export const MissionSection = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate-scale-in");
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const cards = sectionRef.current?.querySelectorAll(".mission-card");
-    cards?.forEach((card) => observer.observe(card));
-
-    return () => observer.disconnect();
-  }, []);
-
   const values = [
     {
       icon: Target,
-      title: "MISSION_01",
-      description: "BREAK_BARRIERS() && CREATE_OPPORTUNITIES() FOR WOMEN IN TECH THROUGH HANDS-ON COLLABORATION"
+      title: "Inclusion",
+      description: "Creating safe, welcoming spaces where everyone can contribute and grow together in their tech journey."
     },
     {
       icon: Users,
-      title: "MISSION_02", 
-      description: "BUILD_COMMUNITY() OF TALENTED DEVELOPERS, DESIGNERS AND INNOVATORS WHO SUPPORT EACH OTHER"
+      title: "Community", 
+      description: "Building a supportive network of talented developers, designers and innovators who lift each other up."
     },
     {
       icon: Rocket,
-      title: "MISSION_03",
-      description: "CONNECT(PARTICIPANTS, COMPANIES) TO CREATE CAREER OPPORTUNITIES AND GROWTH"
+      title: "Empowerment",
+      description: "Providing the tools, knowledge, and confidence needed to succeed and thrive in tech careers."
     }
   ];
 
   return (
-    <section ref={sectionRef} className="py-24 px-4 relative scanlines">
-      <div className="container mx-auto">
+    <section className="py-20 bg-background">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-pixel mb-4 pixel-text glitch">
-            WHY_WE_EXIST
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
+            Our Mission
           </h2>
-          <p className="text-sm text-muted-foreground">
-            &gt; MISSION_STATEMENT.TXT
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            We're dedicated to creating an inclusive ecosystem where women can thrive in technology
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {values.map((value, index) => (
             <div
               key={index}
-              className="mission-card group pixel-border bg-card p-6 hover:bg-primary/10 transition-all cursor-pointer"
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className="group bg-card rounded-lg shadow-card p-8 hover:shadow-glow transition-all hover:-translate-y-2 animate-fade-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-16 h-16 pixel-border bg-primary flex items-center justify-center mb-6 group-hover:animate-pixel-bounce">
-                <value.icon className="w-8 h-8 text-background" />
+              <div className="relative inline-block mb-6">
+                <div className="w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center group-hover:scale-110 transition-transform shine-dot">
+                  <value.icon className="w-8 h-8 text-white" />
+                </div>
               </div>
-              <h3 className="text-lg font-pixel mb-4 text-primary">{value.title}</h3>
-              <p className="text-xs text-muted-foreground leading-relaxed font-mono">
+              <h3 className="text-xl font-bold mb-4 text-foreground">{value.title}</h3>
+              <p className="text-muted-foreground leading-relaxed">
                 {value.description}
               </p>
             </div>
