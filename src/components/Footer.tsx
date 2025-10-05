@@ -1,4 +1,4 @@
-import { Heart, Github, Twitter, Linkedin } from "lucide-react";
+import { Heart, Twitter, Linkedin } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -7,7 +7,7 @@ export const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="space-y-4">
             <h3 className="text-lg font-bold bg-gradient-primary bg-clip-text text-transparent">
-              WomenTech
+              HerCode
             </h3>
             <p className="text-sm text-muted-foreground">
               Empowering women in technology through community, mentorship, and opportunity.
@@ -20,7 +20,6 @@ export const Footer = () => {
               <li><a href="#" className="hover:text-primary transition-colors">About Us</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Past Events</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Sponsors</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">FAQ</a></li>
             </ul>
           </div>
           
@@ -41,9 +40,6 @@ export const Footer = () => {
                 <Twitter className="w-5 h-5" />
               </a>
               <a href="#" className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-                <Github className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center hover:bg-primary hover:text-white transition-all">
                 <Linkedin className="w-5 h-5" />
               </a>
             </div>
@@ -51,7 +47,7 @@ export const Footer = () => {
         </div>
         
         <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <p>&copy; 2025 WomenTech Hackathon. All rights reserved.</p>
+          <p>&copy; 2025 HerCode. All rights reserved.</p>
           <p className="flex items-center gap-2">
             Made with <Heart className="w-4 h-4 text-primary fill-current" /> for women in tech
           </p>
