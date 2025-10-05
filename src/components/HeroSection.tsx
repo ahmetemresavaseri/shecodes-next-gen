@@ -23,7 +23,7 @@ export const HeroSection = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-white/90 max-w-lg leading-relaxed">
-              Join our community of talented women in tech. Connect, learn, and create innovative solutions at our hackathons.
+              Join a community of ambitious women supporting each other to learn, grow, and make an impact.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
