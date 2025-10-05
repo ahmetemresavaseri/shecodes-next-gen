@@ -38,23 +38,23 @@ export const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-14 md:h-16">
           <div 
-            className="flex items-center gap-2 text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent cursor-pointer hover:scale-105 transition-transform"
+            className="flex items-center gap-1.5 md:gap-2 text-xl md:text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent cursor-pointer hover:scale-105 transition-transform"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
-            <Sparkles className="w-5 h-5 text-primary animate-pulse" />
+            <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-primary animate-pulse" />
             <span>HerCode</span>
-            <Sparkles className="w-5 h-5 text-primary animate-pulse" />
+            <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-primary animate-pulse" />
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-4 lg:gap-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-foreground/80 hover:text-primary transition-colors font-medium relative group"
+                className="text-sm lg:text-base text-foreground/80 hover:text-primary transition-colors font-medium relative group"
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
@@ -62,7 +62,8 @@ export const Header = () => {
             ))}
             <Button
               onClick={() => scrollToSection("cta")}
-              className="shadow-glow"
+              className="shadow-glow text-sm lg:text-base"
+              size="sm"
             >
               Become a Member
             </Button>
