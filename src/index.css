@@ -96,6 +96,9 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground font-sans;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
   }
   
   .shine-dot {

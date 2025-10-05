@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { GlitchText } from "@/components/GlitchText";
-import heroImage from "@/assets/hero-pixel.jpg";
+import { TypewriterText } from "@/components/TypewriterText";
+import heroImage from "@/assets/hercode-hero.jpg";
 
 export const HeroSection = () => {
   return (
@@ -14,11 +15,18 @@ export const HeroSection = () => {
               <span className="text-sm text-primary font-medium">Empowering Women in Tech</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
-              <GlitchText text="Build the Future" />
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-pixel leading-tight text-white">
+              <GlitchText text="HerCode" className="text-5xl md:text-6xl lg:text-7xl" />
               <br />
-              <span className="bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent animate-pulse-glow">
-                Together
+              <span className="text-2xl md:text-3xl lg:text-4xl bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent">
+                <TypewriterText
+                  texts={[
+                    "Build Together",
+                    "Code Together",
+                    "Innovate Together",
+                    "Lead Together",
+                  ]}
+                />
               </span>
             </h1>
             
