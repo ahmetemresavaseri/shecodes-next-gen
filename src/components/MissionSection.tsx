@@ -27,9 +27,12 @@ export const MissionSection = () => {
             <div className="bg-gradient-to-br from-primary/5 via-primary/10 to-transparent rounded-2xl p-8 md:p-12 shadow-glow border border-primary/20">
               <div className="flex items-start gap-4 mb-6">
                 <div className="w-1 h-16 bg-gradient-primary rounded-full shine-dot"></div>
-                <h2 className="text-3xl md:text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                  How It Started
-                </h2>
+                <div>
+                  <h2 className="text-3xl md:text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+                    How It Started
+                  </h2>
+                  <p className="text-sm text-muted-foreground mt-2">My path to creating a space for women to thrive.</p>
+                </div>
               </div>
               <p className="text-foreground/90 text-lg md:text-xl leading-relaxed italic">
                 "Throughout my experiences in hackathons and the entrepreneurial world, I noticed how few women were present, yet how much potential was waiting to be seen. That realization inspired me to start HerCode: A community built to empower women to create, lead, and thrive together."
