@@ -5,7 +5,7 @@ import heroImage from "@/assets/hero-pixel.jpg";
 
 export const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-hero pt-16 md:pt-20">
+    <section className="relative overflow-hidden bg-gradient-hero pt-16 md:pt-20 before:absolute before:inset-0 before:bg-background/5 before:pointer-events-none">
       <div className="container mx-auto px-4 py-12 md:py-20">
         <div className="max-w-3xl mx-auto text-center">
           <div className="space-y-6 md:space-y-8 animate-fade-in">
