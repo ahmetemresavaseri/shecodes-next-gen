@@ -1,6 +1,9 @@
-import { Sparkles } from "lucide-react";
+import { Quote } from "lucide-react";
 
 export const TestimonialsSection = () => {
+  // Empty placeholder testimonials
+  const placeholders = [1, 2, 3];
+
   return (
     <section className="py-12 md:py-20 bg-background" id="testimonials">
       <div className="container mx-auto px-4">
@@ -13,21 +16,36 @@ export const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto">
-          <div className="bg-gradient-to-br from-primary/5 via-primary/10 to-transparent rounded-xl md:rounded-2xl p-8 md:p-12 shadow-glow border border-primary/20 text-center">
-            <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-primary flex items-center justify-center animate-pulse">
-                <Sparkles className="w-8 h-8 md:w-10 md:h-10 text-white" />
+        {/* Horizontal scrolling carousel */}
+        <div className="relative max-w-6xl mx-auto">
+          <div className="flex gap-4 md:gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
+            {placeholders.map((_, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] snap-center"
+              >
+                <div className="bg-card/50 rounded-lg md:rounded-xl border-2 border-dashed border-primary/20 p-6 md:p-8 h-full min-h-[280px] flex flex-col justify-between">
+                  <div>
+                    <Quote className="w-8 h-8 md:w-10 md:h-10 text-primary/30 mb-4" />
+                    <div className="space-y-3">
+                      <div className="h-4 bg-muted/30 rounded w-3/4"></div>
+                      <div className="h-4 bg-muted/30 rounded w-full"></div>
+                      <div className="h-4 bg-muted/30 rounded w-5/6"></div>
+                    </div>
+                  </div>
+                  <div className="border-t border-border/50 pt-4 mt-6">
+                    <div className="h-4 bg-muted/30 rounded w-1/2 mb-2"></div>
+                    <div className="h-3 bg-muted/30 rounded w-2/3"></div>
+                  </div>
+                </div>
               </div>
-            </div>
-            <h3 className="text-xl md:text-2xl font-bold mb-4 text-foreground">
-              Your Story Could Be Here
-            </h3>
-            <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-xl mx-auto">
-              Be part of our first event and share your experience of building, learning, and growing with HerCode. Amazing testimonials coming soon from our community members!
-            </p>
+            ))}
           </div>
         </div>
+
+        <p className="text-center text-xs md:text-sm text-muted-foreground mt-6 italic">
+          Swipe to see more testimonials (coming soon)
+        </p>
       </div>
     </section>
   );
