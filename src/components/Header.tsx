@@ -32,19 +32,19 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b-2 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background border-primary shadow-pixel"
-          : "bg-transparent border-transparent"
+          ? "bg-background/95 backdrop-blur-md shadow-lg"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <div 
-            className="text-xl md:text-2xl font-pixel bg-gradient-primary bg-clip-text text-transparent cursor-pointer hover:scale-105 transition-transform"
+            className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent cursor-pointer hover:scale-105 transition-transform"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
-            {"<HerCode/>"}
+            {"<WomenTech />"}
           </div>
 
           {/* Desktop Navigation */}
@@ -53,16 +53,15 @@ export const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-foreground/80 hover:text-primary transition-colors font-pixel text-xs uppercase relative group"
+                className="text-foreground/80 hover:text-primary transition-colors font-medium relative group"
               >
-                [{item.label}]
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full pixel-border" />
+                {item.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
               </button>
             ))}
             <Button
               onClick={() => scrollToSection("cta")}
-              size="sm"
-              variant="hero"
+              className="shadow-glow"
             >
               Join Now
             </Button>
@@ -84,15 +83,14 @@ export const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left py-2 text-foreground/80 hover:text-primary transition-colors font-pixel text-xs uppercase"
+                className="block w-full text-left py-2 text-foreground/80 hover:text-primary transition-colors font-medium"
               >
-                &gt; {item.label}
+                {item.label}
               </button>
             ))}
             <Button
               onClick={() => scrollToSection("cta")}
-              className="w-full"
-              variant="hero"
+              className="w-full shadow-glow"
             >
               Join Now
             </Button>
