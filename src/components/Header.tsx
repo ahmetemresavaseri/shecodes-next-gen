@@ -26,8 +26,8 @@ export const Header = () => {
     { label: "Mission", id: "mission" },
     { label: "Benefits", id: "benefits" },
     { label: "Testimonials", id: "testimonials" },
-    { label: "Sponsors", id: "sponsors" },
-    { label: "Become a Partner", id: "cta" },
+    { label: "Become a Partner", id: "sponsors" },
+    { label: "Our Events", id: "events" },
   ];
 
   return (

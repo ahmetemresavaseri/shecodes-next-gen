@@ -51,12 +51,9 @@ export const CTASection = () => {
         </div>
         
         <div className="text-center">
-          <p className="text-sm text-muted-foreground mb-4">
-            Questions? Reach out at <span className="text-primary font-medium">hello@womentech.com</span>
+          <p className="text-sm text-muted-foreground">
+            Questions or inquiries? Reach out to us at <a href="mailto:zsavaseri@ethz.ch" className="text-primary font-medium hover:underline">zsavaseri@ethz.ch</a>
           </p>
-          <Button variant="outline" size="lg">
-            Become a Sponsor
-          </Button>
         </div>
       </div>
     </section>
