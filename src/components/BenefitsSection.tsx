@@ -39,10 +39,10 @@ export const BenefitsSection = () => {
 
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {participantBenefits.map((benefit, index) => (
-            <Card key={index} className="bg-card hover:shadow-glow transition-all group hover:-translate-y-1">
-              <CardContent className="p-6">
+            <Card key={index} className="bg-card hover:shadow-pixel transition-all group hover:-translate-y-1 relative overflow-hidden pixel-accent pixel-corner-br">
+              <CardContent className="p-6 relative">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform pixel-border">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center flex-shrink-0 group-hover:animate-pixel-pop transition-transform shadow-pixel-sm">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>

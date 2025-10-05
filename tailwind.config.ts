@@ -77,6 +77,8 @@ export default {
         'glow': 'var(--shadow-glow)',
         'card': 'var(--shadow-card)',
         'pixel': 'var(--shadow-pixel)',
+        'pixel-sm': 'var(--shadow-pixel-sm)',
+        'pixel-lg': 'var(--shadow-pixel-lg)',
       },
       keyframes: {
         "accordion-down": {
@@ -127,6 +129,15 @@ export default {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0.5" },
         },
+        "pixel-pop": {
+          "0%, 100%": { transform: "translateY(0) scale(1)" },
+          "50%": { transform: "translateY(-4px) scale(1.02)" },
+        },
+        "pixel-drift": {
+          "0%, 100%": { transform: "translate(0, 0)" },
+          "25%": { transform: "translate(2px, -2px)" },
+          "75%": { transform: "translate(-2px, 2px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -140,6 +151,8 @@ export default {
         "glitch": "glitch 0.3s ease-in-out",
         "scan": "scan 8s linear infinite",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "pixel-pop": "pixel-pop 3s ease-in-out infinite",
+        "pixel-drift": "pixel-drift 4s ease-in-out infinite",
       },
     },
   },

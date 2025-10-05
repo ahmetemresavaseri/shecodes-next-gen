@@ -46,6 +46,8 @@ All colors MUST be HSL.
     --shadow-glow: 0 0 30px hsla(330 85% 60% / 0.3);
     --shadow-card: 0 10px 30px -5px hsla(330 85% 60% / 0.2);
     --shadow-pixel: 4px 4px 0px hsla(330 85% 60% / 0.3);
+    --shadow-pixel-sm: 2px 2px 0px hsla(330 85% 60% / 0.2);
+    --shadow-pixel-lg: 6px 6px 0px hsla(330 85% 60% / 0.4);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -160,6 +162,61 @@ All colors MUST be HSL.
       transform: scale(1.02);
       filter: contrast(1.15) saturate(1.3);
     }
+  }
+
+  @keyframes pixel-pop {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-4px) scale(1.02);
+    }
+  }
+
+  @keyframes pixel-drift {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(2px, -2px);
+    }
+    75% {
+      transform: translate(-2px, 2px);
+    }
+  }
+
+  .pixel-accent {
+    position: relative;
+  }
+
+  .pixel-accent::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: hsl(var(--primary));
+    box-shadow: 0 0 10px hsla(var(--primary) / 0.5);
+    animation: pixel-drift 4s ease-in-out infinite;
+  }
+
+  .pixel-corner-tl::before {
+    top: -4px;
+    left: -4px;
+  }
+
+  .pixel-corner-tr::before {
+    top: -4px;
+    right: -4px;
+  }
+
+  .pixel-corner-bl::before {
+    bottom: -4px;
+    left: -4px;
+  }
+
+  .pixel-corner-br::before {
+    bottom: -4px;
+    right: -4px;
   }
 }
 
