@@ -38,21 +38,6 @@ export const HeroSection = () => {
                 For Companies
               </Button>
             </div>
-            
-            <div className="flex items-center gap-8 pt-4">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white">500+</div>
-                <div className="text-sm text-white/70">Participants</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white">100+</div>
-                <div className="text-sm text-white/70">Companies</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white">48H</div>
-                <div className="text-sm text-white/70">Innovation</div>
-              </div>
-            </div>
           </div>
           
           <div className="relative animate-float">
