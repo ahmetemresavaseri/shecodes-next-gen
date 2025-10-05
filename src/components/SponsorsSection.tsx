@@ -1,15 +1,10 @@
 export const SponsorsSection = () => {
   const sponsors = [
-    { name: "Google", logo: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" },
-    { name: "Microsoft", logo: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" },
-    { name: "Amazon", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" },
-    { name: "Meta", logo: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" },
-    { name: "Apple", logo: "https://www.apple.com/ac/structured-data/images/knowledge_graph_logo.png" },
-    { name: "IBM", logo: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" },
+    { name: "EY", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/EY_Logo_2019.svg/2560px-EY_Logo_2019.svg.png" },
   ];
 
-  // Duplicate sponsors for seamless loop
-  const duplicatedSponsors = [...sponsors, ...sponsors];
+  // Duplicate sponsors for display
+  const duplicatedSponsors = [...sponsors, ...sponsors, ...sponsors];
 
   return (
     <section className="py-16 bg-gradient-to-b from-background to-muted/30 overflow-hidden">
@@ -19,7 +14,7 @@ export const SponsorsSection = () => {
             Backed by Industry Leaders
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Proud to be supported by companies that believe in empowering women in tech
+            Proud to be supported by EY. More sponsors coming soon!
           </p>
         </div>
 

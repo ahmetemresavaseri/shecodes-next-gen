@@ -5,17 +5,17 @@ export const MissionSection = () => {
     {
       icon: Target,
       title: "Inclusion",
-      description: "Creating safe, welcoming spaces where everyone can contribute and grow together in their tech journey."
+      description: "Opening doors for women to step into tech and feel empowered to stay."
     },
     {
       icon: Users,
       title: "Community", 
-      description: "Building a supportive network of talented developers, designers and innovators who lift each other up."
+      description: "Uniting women driven by curiosity, creativity, and code."
     },
     {
       icon: Rocket,
       title: "Empowerment",
-      description: "Providing the tools, knowledge, and confidence needed to succeed and thrive in tech careers."
+      description: "Empowering women to turn ambition into action and ideas into impact."
     }
   ];
 

@@ -44,7 +44,7 @@ export const Header = () => {
             className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent cursor-pointer hover:scale-105 transition-transform"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
-            {"<WomenTech />"}
+            {"<HerCode />"}
           </div>
 
           {/* Desktop Navigation */}
