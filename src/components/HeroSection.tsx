@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { GlitchText } from "@/components/GlitchText";
 import heroImage from "@/assets/hero-pixel.jpg";
 
@@ -17,13 +17,8 @@ export const HeroSection = () => {
       </div>
       
       <div className="container mx-auto px-4 py-12 md:py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div className="max-w-3xl mx-auto text-center lg:text-left lg:mx-0">
           <div className="space-y-6 md:space-y-8 animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-primary/10 border border-primary/20">
-              <Sparkles className="w-3 h-3 md:w-4 md:h-4 text-primary animate-pulse" />
-              <span className="text-xs md:text-sm text-primary font-medium">Empowering Women in Tech</span>
-            </div>
-            
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
               <GlitchText text="Build the Future" />
               <br />
@@ -32,11 +27,11 @@ export const HeroSection = () => {
               </span>
             </h1>
             
-            <p className="text-base md:text-lg lg:text-xl text-white/90 max-w-lg leading-relaxed">
+            <p className="text-base md:text-lg lg:text-xl text-white/90 max-w-lg leading-relaxed mx-auto lg:mx-0">
               Join a community of ambitious women supporting each other to learn, grow, and make an impact.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
               <Button 
                 size="lg" 
                 className="group shadow-glow w-full sm:w-auto"
@@ -59,24 +54,6 @@ export const HeroSection = () => {
               >
                 View Events
               </Button>
-            </div>
-          </div>
-          
-          <div className="relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            {/* Smaller featured image */}
-            <div className="relative w-4/5 mx-auto lg:w-full max-w-md overflow-hidden rounded-xl md:rounded-2xl shadow-glow border-2 border-primary/40">
-              <img
-                src={heroImage}
-                alt="Diverse young women coding together at HerCode hackathon"
-                className="w-full h-full object-cover"
-              />
-              
-              {/* Inner glow ring */}
-              <div className="absolute inset-0 ring-1 ring-inset ring-white/20 rounded-xl md:rounded-2xl"></div>
-              
-              {/* Corner accents */}
-              <div className="absolute top-0 left-0 w-12 md:w-16 h-12 md:h-16 border-t-2 border-l-2 border-primary/60 rounded-tl-xl md:rounded-tl-2xl"></div>
-              <div className="absolute bottom-0 right-0 w-12 md:w-16 h-12 md:h-16 border-b-2 border-r-2 border-primary/60 rounded-br-xl md:rounded-br-2xl"></div>
             </div>
           </div>
         </div>
