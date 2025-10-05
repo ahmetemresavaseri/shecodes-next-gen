@@ -5,19 +5,9 @@ import heroImage from "@/assets/hero-pixel.jpg";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-hero pt-2">
-      {/* Background image with overlay */}
-      <div className="absolute inset-0 opacity-15">
-        <img
-          src={heroImage}
-          alt="Diverse young women coding together at HerCode"
-          className="w-full h-full object-cover scale-125"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background/95"></div>
-      </div>
-      
-      <div className="container mx-auto px-4 py-12 md:py-20 relative z-10">
-        <div className="max-w-3xl mx-auto text-center lg:text-left lg:mx-0">
+    <section className="relative overflow-hidden bg-gradient-hero pt-16 md:pt-20">
+      <div className="container mx-auto px-4 py-12 md:py-20">
+        <div className="max-w-3xl mx-auto text-center">
           <div className="space-y-6 md:space-y-8 animate-fade-in">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
               <GlitchText text="Build the Future" />
@@ -27,11 +17,11 @@ export const HeroSection = () => {
               </span>
             </h1>
             
-            <p className="text-base md:text-lg lg:text-xl text-white/90 max-w-lg leading-relaxed mx-auto lg:mx-0">
+            <p className="text-base md:text-lg lg:text-xl text-white/90 max-w-2xl leading-relaxed mx-auto">
               Join a community of ambitious women supporting each other to learn, grow, and make an impact.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
               <Button 
                 size="lg" 
                 className="group shadow-glow w-full sm:w-auto"
@@ -57,6 +47,15 @@ export const HeroSection = () => {
             </div>
           </div>
         </div>
+      </div>
+      
+      {/* Thin strip banner image */}
+      <div className="w-full h-24 sm:h-32 md:h-40 overflow-hidden border-y-2 border-primary/30">
+        <img
+          src={heroImage}
+          alt="Diverse young women coding together at HerCode hackathon"
+          className="w-full h-full object-cover object-center"
+        />
       </div>
     </section>
   );
