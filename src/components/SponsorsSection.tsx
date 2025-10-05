@@ -42,23 +42,27 @@ export const SponsorsSection = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-20">
-          {sponsors.map((sponsor, index) => (
-            <div
-              key={index}
-              className="w-full h-24 flex items-center justify-center bg-card rounded-lg shadow-card hover:shadow-glow transition-all hover:-translate-y-1 p-4"
-            >
-              {sponsor.isComingSoon ? (
-                <span className="text-muted-foreground font-medium">Coming Soon</span>
-              ) : (
-                <img
-                  src={sponsor.logo}
-                  alt={sponsor.name}
-                  className="max-w-full max-h-full object-contain"
-                />
-              )}
-            </div>
-          ))}
+        {/* Scrolling sponsors marquee */}
+        <div className="relative overflow-hidden mb-20 py-4">
+          <div className="flex animate-scroll-left">
+            {/* First set of sponsors */}
+            {sponsors.concat(sponsors).map((sponsor, index) => (
+              <div
+                key={index}
+                className="flex-shrink-0 w-64 h-32 mx-6 flex items-center justify-center bg-card rounded-lg shadow-card hover:shadow-pixel transition-all p-6"
+              >
+                {sponsor.isComingSoon ? (
+                  <span className="text-muted-foreground font-medium">Coming Soon</span>
+                ) : (
+                  <img
+                    src={sponsor.logo}
+                    alt={sponsor.name}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                )}
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="text-center mb-12">
