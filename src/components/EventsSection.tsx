@@ -58,7 +58,7 @@ export const EventsSection = () => {
             {upcomingEvents.map((event, index) => (
               <div
                 key={index}
-                className="bg-card rounded-lg shadow-card p-8 hover:shadow-glow transition-all hover:-translate-y-1 animate-fade-in"
+                className="bg-card rounded-lg shadow-card p-8 hover:shadow-glow transition-all hover:-translate-y-1 animate-fade-in pixel-border"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <h3 className="text-2xl font-bold mb-4 text-foreground">{event.title}</h3>

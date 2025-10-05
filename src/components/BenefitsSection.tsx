@@ -77,10 +77,10 @@ export const BenefitsSection = () => {
           <TabsContent value="participants" className="animate-fade-in">
             <div className="grid md:grid-cols-2 gap-6">
               {participantBenefits.map((benefit, index) => (
-                <Card key={index} className="bg-card hover:shadow-glow transition-all group">
+                <Card key={index} className="bg-card hover:shadow-glow transition-all group hover:-translate-y-1">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                      <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform pixel-border">
                         <benefit.icon className="w-6 h-6 text-white" />
                       </div>
                       <div>
@@ -97,10 +97,10 @@ export const BenefitsSection = () => {
           <TabsContent value="companies" className="animate-fade-in">
             <div className="grid md:grid-cols-2 gap-6">
               {companyBenefits.map((benefit, index) => (
-                <Card key={index} className="bg-card hover:shadow-glow transition-all group">
+                <Card key={index} className="bg-card hover:shadow-glow transition-all group hover:-translate-y-1">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-lg bg-gradient-secondary flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                      <div className="w-12 h-12 rounded-lg bg-gradient-secondary flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform pixel-border">
                         <benefit.icon className="w-6 h-6 text-white" />
                       </div>
                       <div>

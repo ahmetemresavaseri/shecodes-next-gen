@@ -41,7 +41,7 @@ export const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-card rounded-lg shadow-card p-6 hover:shadow-glow transition-shadow animate-fade-in"
+              className="bg-card rounded-lg shadow-card p-6 hover:shadow-glow transition-all hover:-translate-y-1 animate-fade-in pixel-border"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <Quote className="w-8 h-8 text-primary mb-4" />
