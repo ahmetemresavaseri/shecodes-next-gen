@@ -1,5 +1,6 @@
 import { Briefcase, Award, Users, Network } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export const SponsorsSection = () => {
   const sponsors = [
@@ -64,9 +65,12 @@ export const SponsorsSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-secondary bg-clip-text text-transparent">
             Become a Partner
           </h2>
-          <p className="text-muted-foreground">
-            Benefits for companies joining our community
+          <p className="text-muted-foreground mb-6">
+            Benefits for companies
           </p>
+          <Button size="lg" className="shadow-glow">
+            Partner Up with Us
+          </Button>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">

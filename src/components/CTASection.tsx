@@ -9,23 +9,15 @@ export const CTASection = () => {
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4">
-            Ready to
-            <br />
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Join the Movement?
+              Step Into the HerCode Community
             </span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Choose your journey with us
-          </p>
         </div>
 
         <div className="grid md:grid-cols-1 gap-8 mb-8 max-w-2xl mx-auto">
           {/* Community Member */}
           <div className="bg-card rounded-2xl shadow-card p-8 hover:shadow-glow transition-all hover:-translate-y-1 pixel-border relative overflow-hidden">
-            <div className="absolute top-4 right-4 bg-gradient-primary text-white text-xs font-bold px-3 py-1 rounded-full pixel-border">
-              JOIN US
-            </div>
             <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-primary mb-6 mx-auto animate-float shine-dot">
               <Heart className="w-8 h-8 text-white" />
             </div>
@@ -36,11 +28,7 @@ export const CTASection = () => {
             <ul className="space-y-3 mb-6">
               <li className="flex items-start">
                 <ArrowRight className="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-foreground">Access to all events</span>
-              </li>
-              <li className="flex items-start">
-                <ArrowRight className="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-foreground">Exclusive internal events</span>
+                <span className="text-foreground">Join exclusive member events</span>
               </li>
               <li className="flex items-start">
                 <ArrowRight className="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
@@ -48,11 +36,11 @@ export const CTASection = () => {
               </li>
               <li className="flex items-start">
                 <ArrowRight className="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-foreground">Stay connected with inspiring women</span>
+                <span className="text-foreground">Stay in the loop with our network and access whatsapp account</span>
               </li>
               <li className="flex items-start">
                 <ArrowRight className="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-foreground">Mentorship & career support</span>
+                <span className="text-foreground">Get mentorship for your startup & VC connections</span>
               </li>
             </ul>
             <Button size="lg" className="w-full group shadow-glow">
