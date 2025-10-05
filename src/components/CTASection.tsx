@@ -1,10 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Sparkles, Heart } from "lucide-react";
+import { PixelDecoration } from "./PixelDecoration";
 
 export const CTASection = () => {
   return (
     <section className="py-20 px-4 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-primary opacity-10" />
+      
+      {/* Decorative pixel elements */}
+      <PixelDecoration variant="medium" color="primary" animation="float" position={{ top: '8%', left: '10%' }} />
+      <PixelDecoration variant="small" color="accent" animation="drift" position={{ top: '12%', right: '8%' }} />
+      <PixelDecoration variant="large" color="secondary" animation="pulse" position={{ bottom: '12%', left: '12%' }} />
+      <PixelDecoration variant="medium" color="primary" animation="pop" position={{ bottom: '18%', right: '10%' }} />
       
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="text-center mb-12">
@@ -17,8 +24,8 @@ export const CTASection = () => {
 
         <div className="grid md:grid-cols-1 gap-8 mb-8 max-w-2xl mx-auto">
           {/* Community Member */}
-          <div className="bg-card rounded-2xl shadow-card p-8 hover:shadow-glow transition-all hover:-translate-y-1 pixel-border relative overflow-hidden">
-            <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-primary mb-6 mx-auto animate-float shine-dot">
+          <div className="bg-card rounded-2xl shadow-card p-8 hover:shadow-pixel transition-all hover:-translate-y-1 shadow-pixel-sm relative overflow-hidden pixel-accent pixel-corner-tl">
+            <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-primary mb-6 mx-auto animate-float shine-dot shadow-pixel-sm">
               <Heart className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-2xl font-bold mb-4 text-center">Community Member</h3>
