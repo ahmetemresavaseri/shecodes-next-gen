@@ -3,41 +3,15 @@ import { Button } from "./ui/button";
 
 const upcomingEvents = [
   {
-    title: "Women in Tech Hackathon 2025",
-    date: "March 15-17, 2025",
-    location: "Berlin, Germany",
-    participants: "200+ expected",
-    description: "48-hour intensive hackathon focused on AI and sustainability solutions",
-  },
-  {
-    title: "Tech Mentorship Workshop",
-    date: "April 8, 2025",
-    location: "Virtual Event",
-    participants: "100+ expected",
-    description: "Connect with industry leaders and build your professional network",
+    title: "Joined Hackathon",
+    date: "February 28, 2026",
+    location: "EY Office, Zürich",
+    participants: "60 participants",
+    description: "Join us for an exciting hackathon at the EY office in Zürich",
   },
 ];
 
-const pastEvents = [
-  {
-    title: "Summer Code Challenge 2024",
-    date: "July 2024",
-    participants: "150 participants",
-    achievements: "12 innovative projects, 5 job offers",
-  },
-  {
-    title: "Spring Hackathon 2024",
-    date: "March 2024",
-    participants: "180 participants",
-    achievements: "15 projects, 3 startup founders",
-  },
-  {
-    title: "Women in AI Conference",
-    date: "November 2023",
-    participants: "250+ attendees",
-    achievements: "20+ speakers, networking with top companies",
-  },
-];
+const pastEvents: any[] = [];
 
 export const EventsSection = () => {
   return (
@@ -54,7 +28,7 @@ export const EventsSection = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-1 gap-8 max-w-3xl mx-auto">
             {upcomingEvents.map((event, index) => (
               <div
                 key={index}
@@ -88,34 +62,40 @@ export const EventsSection = () => {
 
         {/* Past Events */}
         <div>
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-secondary bg-clip-text text-transparent">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-bold mb-2 bg-gradient-secondary bg-clip-text text-transparent">
               Past Events
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Celebrating our successful events and achievements
+            </h3>
+            <p className="text-sm text-muted-foreground">
+              More events coming soon
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {pastEvents.map((event, index) => (
-              <div
-                key={index}
-                className="bg-card rounded-lg shadow-card p-6 border-l-4 border-primary animate-slide-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <h3 className="text-xl font-bold mb-2 text-foreground">{event.title}</h3>
-                <p className="text-sm text-muted-foreground mb-4">{event.date}</p>
-                <div className="space-y-2">
-                  <div className="flex items-center text-sm">
-                    <Users className="w-4 h-4 mr-2 text-primary" />
-                    <span className="text-foreground">{event.participants}</span>
+          {pastEvents.length === 0 ? (
+            <div className="text-center text-muted-foreground">
+              <p>No past events yet. Stay tuned!</p>
+            </div>
+          ) : (
+            <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {pastEvents.map((event, index) => (
+                <div
+                  key={index}
+                  className="bg-card rounded-lg shadow-card p-6 border-l-4 border-primary animate-slide-up"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <h3 className="text-xl font-bold mb-2 text-foreground">{event.title}</h3>
+                  <p className="text-sm text-muted-foreground mb-4">{event.date}</p>
+                  <div className="space-y-2">
+                    <div className="flex items-center text-sm">
+                      <Users className="w-4 h-4 mr-2 text-primary" />
+                      <span className="text-foreground">{event.participants}</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">{event.achievements}</p>
                   </div>
-                  <p className="text-sm text-muted-foreground">{event.achievements}</p>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </section>
