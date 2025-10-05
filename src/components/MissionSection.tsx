@@ -22,13 +22,23 @@ export const MissionSection = () => {
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
-            Our Story
-          </h2>
-          <p className="text-muted-foreground max-w-3xl mx-auto text-lg leading-relaxed mb-16">
-            Throughout my experiences in hackathons and the entrepreneurial world, I noticed how few women were present, yet how much potential was waiting to be seen. That realization inspired me to start HerCode: A community built to empower women to create, lead, and thrive together.
-          </p>
+        <div className="relative mb-16">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-primary/5 via-primary/10 to-transparent rounded-2xl p-8 md:p-12 shadow-glow border border-primary/20">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-1 h-16 bg-gradient-primary rounded-full shine-dot"></div>
+                <div>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
+                    My Story
+                  </h2>
+                  <p className="text-sm text-primary font-medium mb-2">The journey that started it all</p>
+                </div>
+              </div>
+              <p className="text-foreground/90 text-lg md:text-xl leading-relaxed italic">
+                "Throughout my experiences in hackathons and the entrepreneurial world, I noticed how few women were present, yet how much potential was waiting to be seen. That realization inspired me to start HerCode: A community built to empower women to create, lead, and thrive together."
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="text-center mb-16">
