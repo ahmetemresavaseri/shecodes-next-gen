@@ -17,9 +17,9 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 15%;
 
-    --primary: 330 85% 60%;
+    --primary: 15 85% 60%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 330 85% 70%;
+    --primary-glow: 15 85% 70%;
 
     --secondary: 280 70% 65%;
     --secondary-foreground: 0 0% 100%;
@@ -27,7 +27,7 @@ All colors MUST be HSL.
     --muted: 240 5% 96%;
     --muted-foreground: 240 4% 46%;
 
-    --accent: 200 80% 60%;
+    --accent: 180 70% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -35,19 +35,19 @@ All colors MUST be HSL.
 
     --border: 240 6% 90%;
     --input: 240 6% 90%;
-    --ring: 330 85% 60%;
+    --ring: 15 85% 60%;
 
     --radius: 0.5rem;
     
-    --gradient-primary: linear-gradient(135deg, hsl(330 85% 60%), hsl(280 70% 65%));
-    --gradient-secondary: linear-gradient(135deg, hsl(280 70% 65%), hsl(200 80% 60%));
-    --gradient-hero: linear-gradient(135deg, hsl(330 85% 60%), hsl(280 70% 65%));
+    --gradient-primary: linear-gradient(135deg, hsl(15 85% 60%), hsl(280 70% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(280 70% 65%), hsl(180 70% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(15 85% 60%), hsl(280 70% 65%));
     
-    --shadow-glow: 0 0 30px hsla(330 85% 60% / 0.3);
-    --shadow-card: 0 10px 30px -5px hsla(330 85% 60% / 0.2);
-    --shadow-pixel: 4px 4px 0px hsla(330 85% 60% / 0.3);
-    --shadow-pixel-sm: 2px 2px 0px hsla(330 85% 60% / 0.2);
-    --shadow-pixel-lg: 6px 6px 0px hsla(330 85% 60% / 0.4);
+    --shadow-glow: 0 0 30px hsla(15 85% 60% / 0.3);
+    --shadow-card: 0 10px 30px -5px hsla(15 85% 60% / 0.2);
+    --shadow-pixel: 4px 4px 0px hsla(15 85% 60% / 0.3);
+    --shadow-pixel-sm: 2px 2px 0px hsla(15 85% 60% / 0.2);
+    --shadow-pixel-lg: 6px 6px 0px hsla(15 85% 60% / 0.4);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -78,8 +78,8 @@ All colors MUST be HSL.
     --muted: 240 10% 20%;
     --muted-foreground: 240 5% 65%;
     
-    --shadow-glow: 0 0 40px hsla(330 85% 60% / 0.4);
-    --shadow-card: 0 10px 40px -5px hsla(330 85% 60% / 0.3);
+    --shadow-glow: 0 0 40px hsla(15 85% 60% / 0.4);
+    --shadow-card: 0 10px 40px -5px hsla(15 85% 60% / 0.3);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
