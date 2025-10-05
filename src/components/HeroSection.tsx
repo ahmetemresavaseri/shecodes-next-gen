@@ -8,7 +8,7 @@ export const HeroSection = () => {
     <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-hero pt-2">
       <div className="container mx-auto px-4 py-12 md:py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-          <div className="space-y-6 md:space-y-8 animate-fade-in order-2 lg:order-1">
+          <div className="space-y-6 md:space-y-8 animate-fade-in">
             <div className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-primary/10 border border-primary/20">
               <Sparkles className="w-3 h-3 md:w-4 md:h-4 text-primary animate-pulse" />
               <span className="text-xs md:text-sm text-primary font-medium">Empowering Women in Tech</span>
@@ -52,7 +52,7 @@ export const HeroSection = () => {
             </div>
           </div>
           
-          <div className="relative group animate-fade-in order-1 lg:order-2" style={{ animationDelay: '0.2s' }}>
+          <div className="relative group animate-fade-in" style={{ animationDelay: '0.2s' }}>
             {/* Glowing backdrop */}
             <div className="absolute -inset-4 md:-inset-8 bg-gradient-primary opacity-30 blur-3xl group-hover:opacity-40 transition-opacity duration-700 animate-pulse"></div>
             
