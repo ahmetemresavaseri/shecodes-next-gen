@@ -30,12 +30,24 @@ export const HeroSection = () => {
               <Button 
                 size="lg" 
                 className="group shadow-glow"
+                onClick={() => {
+                  const element = document.getElementById('cta');
+                  element?.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
-                Join the Hackathon
+                Become a Member
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="outline" size="lg" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
-                For Companies
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="bg-white/10 border-white/20 text-white hover:bg-white/20"
+                onClick={() => {
+                  const element = document.getElementById('events');
+                  element?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                View Events
               </Button>
             </div>
           </div>

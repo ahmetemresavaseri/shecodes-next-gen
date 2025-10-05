@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 const upcomingEvents = [
   {
-    title: "Joined Hackathon",
+    title: "EY Hackathon",
     date: "February 28, 2026",
     location: "EY Office, Zürich",
     participants: "60 participants",
