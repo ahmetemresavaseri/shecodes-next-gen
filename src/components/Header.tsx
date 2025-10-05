@@ -37,15 +37,15 @@ export const Header = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-14 md:h-16">
+      <div className="container mx-auto px-3 sm:px-4">
+        <div className="flex items-center justify-between h-12 sm:h-14 md:h-16">
           <div 
-            className="flex items-center gap-1.5 md:gap-2 text-xl md:text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent cursor-pointer hover:scale-105 transition-transform"
+            className="flex items-center gap-1 sm:gap-1.5 md:gap-2 text-lg sm:text-xl md:text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent cursor-pointer hover:scale-105 transition-transform"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
-            <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-primary animate-pulse" />
+            <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 text-primary animate-pulse" />
             <span>HerCode</span>
-            <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-primary animate-pulse" />
+            <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 text-primary animate-pulse" />
           </div>
 
           {/* Desktop Navigation */}
@@ -62,30 +62,32 @@ export const Header = () => {
             ))}
             <Button
               onClick={() => scrollToSection("cta")}
-              className="shadow-glow text-sm lg:text-base"
+              className="shadow-glow text-xs sm:text-sm lg:text-base px-3 sm:px-4"
               size="sm"
             >
-              Become a Member
+              <span className="hidden sm:inline">Become a Member</span>
+              <span className="sm:hidden">Join</span>
             </Button>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground"
+            className="md:hidden text-foreground p-1"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden pb-6 space-y-4 animate-fade-in">
+          <nav className="md:hidden pb-4 space-y-3 animate-fade-in">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left py-2 text-foreground/80 hover:text-primary transition-colors font-medium"
+                className="block w-full text-left py-2 text-sm text-foreground/80 hover:text-primary transition-colors font-medium"
               >
                 {item.label}
               </button>
@@ -93,6 +95,7 @@ export const Header = () => {
             <Button
               onClick={() => scrollToSection("cta")}
               className="w-full shadow-glow"
+              size="sm"
             >
               Become a Member
             </Button>

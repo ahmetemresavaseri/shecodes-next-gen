@@ -1,64 +1,32 @@
-import { Quote, Star } from "lucide-react";
-
-const testimonials = [
-  {
-    name: "Sarah Chen",
-    role: "Software Engineer",
-    company: "Tech Corp",
-    quote: "This hackathon changed my career trajectory. The mentorship and community I found here were invaluable.",
-    rating: 5,
-  },
-  {
-    name: "Maria Rodriguez",
-    role: "Product Designer",
-    company: "Design Studio",
-    quote: "An incredible experience that connected me with amazing women in tech. I learned so much in just 48 hours!",
-    rating: 5,
-  },
-  {
-    name: "Emily Watson",
-    role: "Data Scientist",
-    company: "AI Innovations",
-    quote: "The supportive environment and expert mentors helped me build confidence and skills. Highly recommend!",
-    rating: 5,
-  },
-];
+import { Sparkles } from "lucide-react";
 
 export const TestimonialsSection = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-12 md:py-20 bg-background" id="testimonials">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 bg-gradient-primary bg-clip-text text-transparent">
             What Our Participants Say
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Hear from the amazing women who have participated in our events
+          <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto px-4">
+            Participant statements coming soon
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="bg-card rounded-lg shadow-card p-6 hover:shadow-glow transition-all hover:-translate-y-1 animate-fade-in pixel-border"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <Quote className="w-8 h-8 text-primary mb-4" />
-              <div className="flex mb-4">
-                {Array.from({ length: testimonial.rating }).map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-primary fill-current" />
-                ))}
-              </div>
-              <p className="text-foreground mb-6 italic">"{testimonial.quote}"</p>
-              <div className="border-t border-border pt-4">
-                <p className="font-semibold text-foreground">{testimonial.name}</p>
-                <p className="text-sm text-muted-foreground">
-                  {testimonial.role} at {testimonial.company}
-                </p>
+        <div className="max-w-3xl mx-auto">
+          <div className="bg-gradient-to-br from-primary/5 via-primary/10 to-transparent rounded-xl md:rounded-2xl p-8 md:p-12 shadow-glow border border-primary/20 text-center">
+            <div className="flex justify-center mb-6">
+              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-primary flex items-center justify-center animate-pulse">
+                <Sparkles className="w-8 h-8 md:w-10 md:h-10 text-white" />
               </div>
             </div>
-          ))}
+            <h3 className="text-xl md:text-2xl font-bold mb-4 text-foreground">
+              Your Story Could Be Here
+            </h3>
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-xl mx-auto">
+              Be part of our first cohort and share your experience of building, learning, and growing with HerCode. Amazing testimonials coming soon from our community members!
+            </p>
+          </div>
         </div>
       </div>
     </section>
