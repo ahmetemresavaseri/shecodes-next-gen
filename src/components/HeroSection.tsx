@@ -7,13 +7,13 @@ export const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-hero pt-2">
       {/* Background image with overlay */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-15">
         <img
           src={heroImage}
           alt="Diverse young women coding together at HerCode"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover scale-125"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background/95"></div>
       </div>
       
       <div className="container mx-auto px-4 py-12 md:py-20 relative z-10">
