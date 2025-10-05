@@ -1,5 +1,4 @@
 import { Target, Users, Rocket } from "lucide-react";
-import { PixelDecoration } from "./PixelDecoration";
 
 export const MissionSection = () => {
   const values = [
@@ -21,14 +20,8 @@ export const MissionSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-background relative overflow-hidden">
-      {/* Decorative pixel elements */}
-      <PixelDecoration variant="medium" color="primary" animation="float" position={{ top: '10%', left: '5%' }} />
-      <PixelDecoration variant="small" color="secondary" animation="drift" position={{ top: '20%', right: '10%' }} />
-      <PixelDecoration variant="large" color="accent" animation="pulse" position={{ bottom: '15%', left: '15%' }} />
-      <PixelDecoration variant="medium" color="primary" animation="pop" position={{ bottom: '25%', right: '8%' }} />
-      
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="py-20 bg-background">
+      <div className="container mx-auto px-4">
         <div className="relative mb-16">
           <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-br from-primary/5 via-primary/10 to-transparent rounded-2xl p-8 md:p-12 shadow-glow border border-primary/20">
@@ -61,7 +54,7 @@ export const MissionSection = () => {
           {values.map((value, index) => (
             <div
               key={index}
-              className="group bg-card rounded-lg shadow-card p-8 hover:shadow-pixel transition-all hover:-translate-y-2 animate-fade-in relative overflow-hidden pixel-accent pixel-corner-tl"
+              className="group bg-card rounded-lg shadow-card p-8 hover:shadow-pixel transition-all hover:-translate-y-2 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative inline-block mb-6">

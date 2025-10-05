@@ -40,7 +40,7 @@ export const Header = () => {
       <div className="container mx-auto px-3 sm:px-4">
         <div className="flex items-center justify-between h-12 sm:h-14 md:h-16">
           <div 
-            className="flex items-center gap-1 sm:gap-1.5 text-sm sm:text-base md:text-lg font-bold bg-gradient-primary bg-clip-text text-transparent cursor-pointer hover:scale-105 transition-transform relative pixel-accent pixel-corner-tl"
+            className="flex items-center gap-1 sm:gap-1.5 text-sm sm:text-base md:text-lg font-bold bg-gradient-primary bg-clip-text text-transparent cursor-pointer hover:scale-105 transition-transform"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 text-primary animate-pixel-pop" />

@@ -1,19 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { GlitchText } from "@/components/GlitchText";
-import { PixelDecoration } from "@/components/PixelDecoration";
 import heroImage from "@/assets/hero-pixel.jpg";
 
 export const HeroSection = () => {
   return (
     <section className="relative overflow-hidden bg-gradient-hero pt-16 md:pt-20">
-      {/* Decorative floating pixel elements */}
-      <PixelDecoration variant="large" color="primary" animation="float" position={{ top: '15%', left: '5%' }} />
-      <PixelDecoration variant="medium" color="accent" animation="drift" position={{ top: '25%', right: '8%' }} />
-      <PixelDecoration variant="small" color="secondary" animation="pulse" position={{ top: '40%', left: '12%' }} />
-      <PixelDecoration variant="medium" color="primary" animation="pop" position={{ top: '35%', right: '15%' }} />
-      
-      <div className="container mx-auto px-4 py-12 md:py-20 relative z-10">
+      <div className="container mx-auto px-4 py-12 md:py-20">
         <div className="max-w-3xl mx-auto text-center">
           <div className="space-y-6 md:space-y-8 animate-fade-in">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">

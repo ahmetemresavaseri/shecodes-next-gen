@@ -1,6 +1,5 @@
 import { Calendar, MapPin, Users, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
-import { PixelDecoration } from "./PixelDecoration";
 
 const upcomingEvents = [
   {
@@ -16,14 +15,8 @@ const pastEvents: any[] = [];
 
 export const EventsSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-muted/30 to-background relative overflow-hidden">
-      {/* Decorative pixel elements */}
-      <PixelDecoration variant="small" color="primary" animation="drift" position={{ top: '5%', left: '8%' }} />
-      <PixelDecoration variant="medium" color="accent" animation="float" position={{ top: '15%', right: '12%' }} />
-      <PixelDecoration variant="large" color="secondary" animation="pulse" position={{ bottom: '10%', left: '10%' }} />
-      <PixelDecoration variant="small" color="primary" animation="pop" position={{ bottom: '20%', right: '15%' }} />
-      
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
+      <div className="container mx-auto px-4">
         {/* Upcoming Events */}
         <div className="mb-20">
           <div className="text-center mb-12">
@@ -39,7 +32,7 @@ export const EventsSection = () => {
             {upcomingEvents.map((event, index) => (
               <div
                 key={index}
-                className="bg-card rounded-lg shadow-card p-8 hover:shadow-pixel transition-all hover:-translate-y-1 animate-fade-in shadow-pixel-sm relative overflow-hidden pixel-accent pixel-corner-br"
+                className="bg-card rounded-lg shadow-card p-8 hover:shadow-pixel transition-all hover:-translate-y-1 animate-fade-in shadow-pixel-sm"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <h3 className="text-2xl font-bold mb-4 text-foreground">{event.title}</h3>
