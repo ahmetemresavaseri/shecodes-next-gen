@@ -20,40 +20,11 @@ export const CTASection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
-          {/* Single Event Participant */}
-          <div className="bg-card rounded-2xl shadow-card p-8 hover:shadow-glow transition-all hover:-translate-y-1 pixel-border">
-            <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-primary mb-6 mx-auto animate-float">
-              <Sparkles className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Event Participant</h3>
-            <p className="text-muted-foreground text-center mb-6">
-              Join individual hackathons and events. Perfect if you want to try us out or participate in specific events that interest you.
-            </p>
-            <ul className="space-y-3 mb-6">
-              <li className="flex items-start">
-                <ArrowRight className="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-foreground">Access to public events</span>
-              </li>
-              <li className="flex items-start">
-                <ArrowRight className="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-foreground">Network with participants</span>
-              </li>
-              <li className="flex items-start">
-                <ArrowRight className="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-foreground">Win prizes & recognition</span>
-              </li>
-            </ul>
-            <Button size="lg" variant="outline" className="w-full group">
-              Join Single Event
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </div>
-
+        <div className="grid md:grid-cols-1 gap-8 mb-8 max-w-2xl mx-auto">
           {/* Community Member */}
           <div className="bg-card rounded-2xl shadow-card p-8 hover:shadow-glow transition-all hover:-translate-y-1 pixel-border relative overflow-hidden">
-            <div className="absolute top-4 right-4 bg-gradient-primary text-white text-xs font-bold px-3 py-1 rounded-full">
-              RECOMMENDED
+            <div className="absolute top-4 right-4 bg-gradient-primary text-white text-xs font-bold px-3 py-1 rounded-full pixel-border">
+              JOIN US
             </div>
             <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-primary mb-6 mx-auto animate-float shine-dot">
               <Heart className="w-8 h-8 text-white" />
@@ -65,7 +36,7 @@ export const CTASection = () => {
             <ul className="space-y-3 mb-6">
               <li className="flex items-start">
                 <ArrowRight className="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-foreground">All event participant benefits</span>
+                <span className="text-foreground">Access to all events</span>
               </li>
               <li className="flex items-start">
                 <ArrowRight className="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
