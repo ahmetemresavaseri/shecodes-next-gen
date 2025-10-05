@@ -52,23 +52,17 @@ export const HeroSection = () => {
             </div>
           </div>
           
-          <div className="relative group animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
             {/* Glowing backdrop */}
-            <div className="absolute -inset-4 md:-inset-8 bg-gradient-primary opacity-30 blur-3xl group-hover:opacity-40 transition-opacity duration-700 animate-pulse"></div>
+            <div className="absolute -inset-4 md:-inset-8 bg-gradient-primary opacity-30 blur-3xl animate-pulse"></div>
             
             {/* Main image container */}
-            <div className="relative overflow-hidden rounded-xl md:rounded-2xl shadow-glow border-2 border-primary/40 group-hover:border-primary/60 transition-all duration-500 group-hover:scale-[1.02] transform-gpu">
-              {/* Animated gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 via-transparent to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10 mix-blend-overlay"></div>
-              
-              {/* Shine effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 z-20"></div>
-              
+            <div className="relative overflow-hidden rounded-xl md:rounded-2xl shadow-glow border-2 border-primary/40">
               {/* Image */}
               <img
                 src={heroImage}
-                alt="Women coding together at HerCode hackathon - Building the future of tech together"
-                className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                alt="Young women coding together at HerCode hackathon - Building the future of tech together in the city"
+                className="w-full h-full object-cover"
               />
               
               {/* Inner glow ring */}
