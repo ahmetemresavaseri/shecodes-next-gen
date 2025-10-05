@@ -52,13 +52,16 @@ export const HeroSection = () => {
             </div>
           </div>
           
-          <div className="relative animate-float">
-            <div className="overflow-hidden shadow-card pixel-border">
+          <div className="relative group animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="absolute inset-0 bg-gradient-primary opacity-20 blur-3xl group-hover:opacity-30 transition-opacity duration-500"></div>
+            <div className="relative overflow-hidden rounded-2xl shadow-glow border-2 border-primary/30 group-hover:border-primary/50 transition-all duration-300 group-hover:scale-[1.02]">
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
               <img
                 src={heroImage}
-                alt="Women coding together at hackathon"
-                className="w-full object-cover animate-pulse-subtle pixelated-image"
+                alt="Women coding together at hackathon - HerCode community in action"
+                className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
               />
+              <div className="absolute inset-0 ring-1 ring-inset ring-white/10"></div>
             </div>
           </div>
         </div>
