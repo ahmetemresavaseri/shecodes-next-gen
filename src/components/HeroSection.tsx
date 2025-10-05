@@ -41,11 +41,11 @@ export const HeroSection = () => {
           </div>
           
           <div className="relative animate-float">
-            <div className="rounded-2xl overflow-hidden shadow-card pixel-border">
+            <div className="overflow-hidden shadow-card pixel-border">
               <img
                 src={heroImage}
                 alt="Women coding together at hackathon"
-                className="w-full object-cover"
+                className="w-full object-cover animate-pulse-subtle pixelated-image"
               />
             </div>
           </div>
