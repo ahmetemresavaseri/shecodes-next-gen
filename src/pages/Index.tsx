@@ -13,10 +13,12 @@ import { FloatingCode } from "@/components/FloatingCode";
 import { PixelGrid } from "@/components/PixelGrid";
 import { PixelTrail } from "@/components/PixelTrail";
 import { BinaryRain } from "@/components/BinaryRain";
+import { RetroGrid } from "@/components/RetroGrid";
 
 const Index = () => {
   return (
-    <main className="min-h-screen relative overflow-hidden">
+    <main className="min-h-screen relative overflow-hidden bg-background">
+      <RetroGrid />
       <MatrixRain />
       <BinaryRain />
       <PixelGrid />

@@ -32,10 +32,10 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b-2 ${
         isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-lg"
-          : "bg-transparent"
+          ? "bg-background border-primary shadow-pixel"
+          : "bg-transparent border-transparent"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -53,15 +53,16 @@ export const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-foreground/80 hover:text-primary transition-colors font-medium relative group"
+                className="text-foreground/80 hover:text-primary transition-colors font-pixel text-xs uppercase relative group"
               >
-                {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
+                [{item.label}]
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full pixel-border" />
               </button>
             ))}
             <Button
               onClick={() => scrollToSection("cta")}
-              className="shadow-glow"
+              size="sm"
+              variant="hero"
             >
               Join Now
             </Button>
@@ -83,14 +84,15 @@ export const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left py-2 text-foreground/80 hover:text-primary transition-colors font-medium"
+                className="block w-full text-left py-2 text-foreground/80 hover:text-primary transition-colors font-pixel text-xs uppercase"
               >
-                {item.label}
+                &gt; {item.label}
               </button>
             ))}
             <Button
               onClick={() => scrollToSection("cta")}
-              className="w-full shadow-glow"
+              className="w-full"
+              variant="hero"
             >
               Join Now
             </Button>

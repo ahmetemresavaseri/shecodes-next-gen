@@ -6,13 +6,13 @@ import heroImage from "@/assets/hercode-hero.jpg";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-hero pt-20">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-background pt-20 retro-grid scanline">
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border-2 border-primary pixel-border">
               <Sparkles className="w-4 h-4 text-primary animate-pulse" />
-              <span className="text-sm text-primary font-medium">Empowering Women in Tech</span>
+              <span className="text-xs text-primary font-pixel uppercase">Empowering Women in Tech</span>
             </div>
             
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-pixel leading-tight text-white">
@@ -30,41 +30,44 @@ export const HeroSection = () => {
               </span>
             </h1>
             
-            <p className="text-lg md:text-xl text-white/90 max-w-lg leading-relaxed">
-              Join our community of talented women in tech. Connect, learn, and create innovative solutions at our hackathons.
+            <p className="text-base md:text-lg text-foreground/80 max-w-lg leading-relaxed font-mono">
+              &gt; Join our community of talented women in tech_
+              <br />
+              &gt; Connect. Learn. Build._
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg" 
-                className="group shadow-glow"
+                variant="hero"
+                className="group"
               >
                 Join the Hackathon
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="outline" size="lg" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
+              <Button variant="outline" size="lg">
                 For Companies
               </Button>
             </div>
             
-            <div className="flex items-center gap-8 pt-4">
+            <div className="flex items-center gap-8 pt-4 font-pixel">
               <div className="text-center">
-                <div className="text-3xl font-bold text-white">500+</div>
-                <div className="text-sm text-white/70">Participants</div>
+                <div className="text-2xl font-bold text-primary">500+</div>
+                <div className="text-xs text-muted-foreground uppercase">Participants</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-white">100+</div>
-                <div className="text-sm text-white/70">Companies</div>
+                <div className="text-2xl font-bold text-primary">100+</div>
+                <div className="text-xs text-muted-foreground uppercase">Companies</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-white">48H</div>
-                <div className="text-sm text-white/70">Innovation</div>
+                <div className="text-2xl font-bold text-primary">48H</div>
+                <div className="text-xs text-muted-foreground uppercase">Innovation</div>
               </div>
             </div>
           </div>
           
           <div className="relative animate-float">
-            <div className="rounded-2xl overflow-hidden shadow-card pixel-border">
+            <div className="overflow-hidden pixel-border shadow-card">
               <img
                 src={heroImage}
                 alt="Women coding together at hackathon"
