@@ -24,7 +24,7 @@ export const TestimonialsSection = () => {
               Your Story Could Be Here
             </h3>
             <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-xl mx-auto">
-              Be part of our first cohort and share your experience of building, learning, and growing with HerCode. Amazing testimonials coming soon from our community members!
+              Be part of our first event and share your experience of building, learning, and growing with HerCode. Amazing testimonials coming soon from our community members!
             </p>
           </div>
         </div>
