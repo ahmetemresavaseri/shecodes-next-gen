@@ -24,10 +24,10 @@ export const Header = () => {
 
   const navItems = [
     { label: "Mission", id: "mission" },
-    { label: "Events", id: "events" },
     { label: "Benefits", id: "benefits" },
     { label: "Testimonials", id: "testimonials" },
     { label: "Sponsors", id: "sponsors" },
+    { label: "Become a Partner", id: "cta" },
   ];
 
   return (
@@ -63,7 +63,7 @@ export const Header = () => {
               onClick={() => scrollToSection("cta")}
               className="shadow-glow"
             >
-              Join Now
+              Become a Member
             </Button>
           </nav>
 
@@ -92,7 +92,7 @@ export const Header = () => {
               onClick={() => scrollToSection("cta")}
               className="w-full shadow-glow"
             >
-              Join Now
+              Become a Member
             </Button>
           </nav>
         )}

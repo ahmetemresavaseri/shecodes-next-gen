@@ -16,7 +16,6 @@ const Index = () => {
       <Header />
       <HeroSection />
       <section id="mission"><MissionSection /></section>
-      <section id="events"><EventsSection /></section>
       <section id="benefits"><BenefitsSection /></section>
       <section id="testimonials"><TestimonialsSection /></section>
       <section id="sponsors"><SponsorsSection /></section>

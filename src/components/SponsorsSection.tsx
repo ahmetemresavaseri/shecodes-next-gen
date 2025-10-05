@@ -1,10 +1,10 @@
 export const SponsorsSection = () => {
   const sponsors = [
-    { name: "EY", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/EY_Logo_2019.svg/2560px-EY_Logo_2019.svg.png" },
+    { name: "EY", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/EY_Logo_2019.svg/2560px-EY_Logo_2019.svg.png", isComingSoon: false },
+    { name: "Coming Soon", logo: "", isComingSoon: true },
+    { name: "Coming Soon", logo: "", isComingSoon: true },
+    { name: "Coming Soon", logo: "", isComingSoon: true },
   ];
-
-  // Duplicate sponsors for display
-  const duplicatedSponsors = [...sponsors, ...sponsors, ...sponsors];
 
   return (
     <section className="py-16 bg-gradient-to-b from-background to-muted/30 overflow-hidden">
@@ -13,35 +13,25 @@ export const SponsorsSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
             Backed by Industry Leaders
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Proud to be supported by EY. More sponsors coming soon!
-          </p>
         </div>
 
-        <div className="relative">
-          {/* Gradient overlays */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
-          
-          {/* Scrolling container */}
-          <div className="flex">
-            <div 
-              className="flex animate-[scroll-left_30s_linear_infinite] hover:[animation-play-state:paused]"
+        <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+          {sponsors.map((sponsor, index) => (
+            <div
+              key={index}
+              className="w-full h-24 flex items-center justify-center bg-card rounded-lg shadow-card hover:shadow-glow transition-all hover:-translate-y-1 p-4"
             >
-              {duplicatedSponsors.map((sponsor, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 mx-8 w-40 h-24 flex items-center justify-center bg-card rounded-lg shadow-card hover:shadow-glow transition-all hover:-translate-y-1 p-4"
-                >
-                  <img
-                    src={sponsor.logo}
-                    alt={sponsor.name}
-                    className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all"
-                  />
-                </div>
-              ))}
+              {sponsor.isComingSoon ? (
+                <span className="text-muted-foreground font-medium">Coming Soon</span>
+              ) : (
+                <img
+                  src={sponsor.logo}
+                  alt={sponsor.name}
+                  className="max-w-full max-h-full object-contain"
+                />
+              )}
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
