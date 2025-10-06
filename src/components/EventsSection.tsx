@@ -21,13 +21,10 @@ export const EventsSection = () => {
         <div className="mb-20">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
-              Upcoming Events
+              Public Events
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto mb-2">
-              Join us at our next events and be part of the change
-            </p>
-            <p className="text-sm text-primary font-medium">
-              ✨ Open to everyone — membership not required!
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              All our events are open to everyone. Join us and be part of the change — no membership required.
             </p>
           </div>
 
