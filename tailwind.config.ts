@@ -138,10 +138,6 @@ export default {
           "25%": { transform: "translate(2px, -2px)" },
           "75%": { transform: "translate(-2px, 2px)" },
         },
-        "code-scroll": {
-          "0%": { transform: "translateY(0)" },
-          "100%": { transform: "translateY(-50%)" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -157,8 +153,6 @@ export default {
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
         "pixel-pop": "pixel-pop 3s ease-in-out infinite",
         "pixel-drift": "pixel-drift 4s ease-in-out infinite",
-        "code-scroll": "code-scroll 8s linear infinite",
-        "code-scroll-delayed": "code-scroll 10s linear infinite",
       },
     },
   },
