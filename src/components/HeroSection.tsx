@@ -50,7 +50,7 @@ export const HeroSection = () => {
       </div>
       
       {/* Thin strip banner image */}
-      <div className="w-full h-32 sm:h-48 md:h-64 lg:h-80 overflow-hidden border-y-2 border-primary/30">
+      <div className="w-full h-48 sm:h-64 md:h-80 lg:h-96 overflow-hidden border-y-2 border-primary/30">
         <img
           src={heroImage}
           alt="Diverse young women coding together at HerCode hackathon"
