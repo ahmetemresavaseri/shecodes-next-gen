@@ -13,6 +13,9 @@ export const CTASection = () => {
               Step Into the HerCode Community
             </span>
           </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            While our events are open to all, becoming a member unlocks exclusive benefits and deeper connections
+          </p>
         </div>
 
         <div className="grid md:grid-cols-1 gap-8 mb-8 max-w-2xl mx-auto">
@@ -21,9 +24,9 @@ export const CTASection = () => {
             <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-primary mb-6 mx-auto animate-float shine-dot shadow-pixel-sm">
               <Heart className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-center">Community Member</h3>
+            <h3 className="text-2xl font-bold mb-4 text-center">Membership Benefits</h3>
             <p className="text-muted-foreground text-center mb-6">
-              Become part of our empowering community. Stay connected with inspiring women, find co-founders, and access exclusive events.
+              Get the most out of HerCode! Members enjoy priority access, exclusive networking opportunities, and ongoing support for your journey.
             </p>
             <ul className="space-y-3 mb-6">
               <li className="flex items-start">
