@@ -53,7 +53,7 @@ export const HeroSection = () => {
       <div className="w-full h-48 sm:h-64 md:h-80 lg:h-96 overflow-hidden border-y-2 border-primary/30">
         <img
           src={heroImage}
-          alt="Two diverse young women collaborating on code together at HerCode hackathon"
+          alt="Three diverse women collaborating on startup code with dual monitors in pixel art style"
           className="w-full h-full object-cover object-center"
         />
       </div>
