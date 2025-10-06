@@ -1,29 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { GlitchText } from "@/components/GlitchText";
-import { PixelDecoration } from "@/components/PixelDecoration";
 import heroImage from "@/assets/hero-pixel.jpg";
 
 export const HeroSection = () => {
   return (
     <section className="relative overflow-hidden bg-gradient-hero pt-16 md:pt-20 before:absolute before:inset-0 before:bg-background/5 before:pointer-events-none">
-      {/* Pixel Decorations */}
-      <PixelDecoration variant="large" color="primary" animation="float" position={{ top: '10%', left: '5%' }} />
-      <PixelDecoration variant="medium" color="accent" animation="pulse" position={{ top: '20%', right: '8%' }} />
-      <PixelDecoration variant="small" color="secondary" animation="drift" position={{ top: '35%', left: '12%' }} />
-      <PixelDecoration variant="medium" color="primary" animation="pop" position={{ top: '15%', right: '15%' }} />
-      <PixelDecoration variant="large" color="accent" animation="drift" position={{ bottom: '60%', left: '8%' }} />
-      <PixelDecoration variant="small" color="primary" animation="pulse" position={{ bottom: '65%', right: '10%' }} />
-      <PixelDecoration variant="medium" color="secondary" animation="float" position={{ top: '40%', right: '5%' }} />
-      <PixelDecoration variant="large" color="primary" animation="pop" position={{ top: '50%', left: '3%' }} />
-      <PixelDecoration variant="small" color="accent" animation="drift" position={{ bottom: '55%', left: '18%' }} />
-      <PixelDecoration variant="medium" color="primary" animation="pulse" position={{ bottom: '58%', right: '20%' }} />
-      
-      {/* Scanline effect */}
-      <div className="absolute inset-0 pointer-events-none opacity-10">
-        <div className="w-full h-1 bg-primary/30 animate-scan" />
-      </div>
-      
       <div className="container mx-auto px-4 py-12 md:py-20">
         <div className="max-w-3xl mx-auto text-center">
           <div className="space-y-6 md:space-y-8 animate-fade-in">
