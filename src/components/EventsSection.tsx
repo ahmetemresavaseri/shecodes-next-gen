@@ -24,7 +24,7 @@ export const EventsSection = () => {
               Public Events
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              All our events are open to everyone. Join us and be part of the change — no membership required.
+              Join us at our upcoming events and connect with the community
             </p>
           </div>
 
