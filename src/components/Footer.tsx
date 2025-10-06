@@ -1,4 +1,4 @@
-import { Heart, Twitter, Linkedin } from "lucide-react";
+import { Heart, Linkedin, Instagram } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -17,9 +17,10 @@ export const Footer = () => {
           <div>
             <h4 className="font-semibold text-sm mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Past Events</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Sponsors</a></li>
+              <li><a href="#mission" className="hover:text-primary transition-colors">Mission</a></li>
+              <li><a href="#events" className="hover:text-primary transition-colors">Events</a></li>
+              <li><a href="#testimonials" className="hover:text-primary transition-colors">Testimonials</a></li>
+              <li><a href="#sponsors" className="hover:text-primary transition-colors">Sponsors</a></li>
             </ul>
           </div>
           
@@ -37,10 +38,10 @@ export const Footer = () => {
             <h4 className="font-semibold text-sm mb-4">Connect</h4>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-                <Twitter className="w-5 h-5" />
+                <Linkedin className="w-5 h-5" />
               </a>
               <a href="#" className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-                <Linkedin className="w-5 h-5" />
+                <Instagram className="w-5 h-5" />
               </a>
             </div>
           </div>
