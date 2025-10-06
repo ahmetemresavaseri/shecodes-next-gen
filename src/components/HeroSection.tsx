@@ -49,13 +49,36 @@ export const HeroSection = () => {
         </div>
       </div>
       
-      {/* Thin strip banner image */}
-      <div className="w-full h-48 sm:h-64 md:h-80 lg:h-96 overflow-hidden border-y-2 border-primary/30">
+      {/* Thin strip banner image with animated code overlay */}
+      <div className="w-full h-48 sm:h-64 md:h-80 lg:h-96 overflow-hidden border-y-2 border-primary/30 relative">
         <img
           src={heroImage}
-          alt="Diverse young women coding together at HerCode hackathon"
+          alt="Two diverse young women collaborating on code together at HerCode hackathon"
           className="w-full h-full object-cover object-center"
         />
+        
+        {/* Animated code overlay on the screen area */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-32 sm:w-48 md:w-64 h-24 sm:h-32 md:h-48 opacity-70">
+          <div className="text-[6px] sm:text-[8px] md:text-xs font-mono text-primary-glow leading-tight overflow-hidden h-full">
+            <div className="animate-code-scroll space-y-0.5 sm:space-y-1">
+              <div className="text-blue-400">const buildFuture = () =&gt; &#123;</div>
+              <div className="pl-2 text-purple-400">return innovate();</div>
+              <div className="text-blue-400">&#125;;</div>
+              <div className="text-green-400">// Empowering women</div>
+              <div className="text-pink-400">interface Coder &#123;</div>
+              <div className="pl-2 text-yellow-400">skills: string[];</div>
+              <div className="pl-2 text-cyan-400">passion: boolean;</div>
+              <div className="text-pink-400">&#125;</div>
+              <div className="text-orange-400">export class Innovation</div>
+              <div className="text-blue-400">const buildFuture = () =&gt; &#123;</div>
+              <div className="pl-2 text-purple-400">return innovate();</div>
+              <div className="text-blue-400">&#125;;</div>
+              <div className="text-green-400">// Together we code</div>
+              <div className="text-pink-400">interface Coder &#123;</div>
+              <div className="pl-2 text-yellow-400">skills: string[];</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
