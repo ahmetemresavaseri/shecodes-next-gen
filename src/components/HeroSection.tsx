@@ -50,12 +50,70 @@ export const HeroSection = () => {
       </div>
       
       {/* Thin strip banner image */}
-      <div className="w-full h-48 sm:h-64 md:h-80 lg:h-96 overflow-hidden border-y-2 border-primary/30">
+      <div className="w-full h-48 sm:h-64 md:h-80 lg:h-96 overflow-hidden border-y-2 border-primary/30 relative">
         <img
           src={heroImage}
           alt="Diverse young women coding together at HerCode hackathon"
           className="w-full h-full object-cover object-center"
         />
+        {/* Animated code overlay effect */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute left-[15%] top-[25%] w-[20%] h-[40%] overflow-hidden opacity-70">
+            <div className="animate-code-scroll text-[0.4rem] md:text-[0.6rem] font-mono text-green-400 leading-tight whitespace-pre">
+              {`const buildFuture = () => {
+  return women.map(w => ({
+    ...w.skills,
+    empowered: true,
+    coding: true
+  }));
+};
+
+function inspire() {
+  const community = [];
+  for(let i=0; i<100; i++) {
+    community.push(learn());
+  }
+  return community;
+}`}
+            </div>
+          </div>
+          <div className="absolute left-[42%] top-[25%] w-[20%] h-[40%] overflow-hidden opacity-70">
+            <div className="animate-code-scroll-delayed text-[0.4rem] md:text-[0.6rem] font-mono text-purple-400 leading-tight whitespace-pre" style={{ animationDelay: '1s' }}>
+              {`interface Coder {
+  name: string;
+  skills: string[];
+  passion: number;
+}
+
+const team: Coder[] = [
+  { name: "Dev1",
+    skills: ["React"],
+    passion: 100 },
+  { name: "Dev2",
+    skills: ["Python"],
+    passion: 100 }
+];`}
+            </div>
+          </div>
+          <div className="absolute left-[68%] top-[25%] w-[20%] h-[40%] overflow-hidden opacity-70">
+            <div className="animate-code-scroll text-[0.4rem] md:text-[0.6rem] font-mono text-blue-400 leading-tight whitespace-pre" style={{ animationDelay: '2s' }}>
+              {`class Innovation {
+  constructor() {
+    this.ideas = [];
+    this.impact = 0;
+  }
+  
+  create() {
+    this.ideas.push({
+      innovative: true,
+      collaborative: true
+    });
+    this.impact++;
+  }
+}`}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
