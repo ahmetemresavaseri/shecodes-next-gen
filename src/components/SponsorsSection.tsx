@@ -6,8 +6,8 @@ export const SponsorsSection = () => {
   const sponsors = [
     {
       name: "EY",
-      // Wikimedia Commons PNG of the EY logo; hotlink-safe and cacheable
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/EY_logo_2019.svg/512px-EY_logo_2019.svg.png",
+      // Local asset for reliability
+      logo: "/ey.svg",
       isComingSoon: false,
     },
     { name: "Coming Soon", logo: "", isComingSoon: true },
