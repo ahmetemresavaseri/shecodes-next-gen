@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <title>EY</title>
+  <defs>
+    <linearGradient id="beam" x1="6" y1="14" x2="58" y2="2" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFD200"/>
+      <stop offset="1" stop-color="#FFD200"/>
+    </linearGradient>
+  </defs>
+  <!-- Yellow beam -->
+  <path d="M6 26 L58 18 L58 6 Z" fill="url(#beam)"/>
+  <!-- EY letters -->
+  <g fill="#151A24">
+    <!-- E -->
+    <path d="M8 38 H30 V44 H16 V50 H28 V56 H8 Z"/>
+    <!-- Y -->
+    <path d="M34 38 H42 L48 48 L54 38 H62 L50 58 V56 H42 V58 Z"/>
+  </g>
+</svg>
