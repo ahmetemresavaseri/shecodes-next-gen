@@ -6,8 +6,8 @@ export const SponsorsSection = () => {
   const sponsors = [
     {
       name: "EY",
-      // Local asset for reliability
-      logo: "/ey.svg",
+      // Local PNG asset for reliability
+      logo: "/EY Logo.png",
       isComingSoon: false,
     },
     { name: "Coming Soon", logo: "", isComingSoon: true },
