@@ -1,60 +1,64 @@
-name: Deploy to GitHub Pages
+# Name des Workflows, der im "Actions"-Tab auf GitHub angezeigt wird
+name: Deploy Vite Project to GitHub Pages
 
 on:
+  # Wird ausgeführt, wenn du Code in den 'main'-Branch pushst
   push:
-    branches: ["main"]
+    branches: ['main'] # Ändere dies zu 'master', falls dein Haupt-Branch so heisst
+
+  # Erlaubt dir, diesen Workflow manuell im "Actions"-Tab zu starten
   workflow_dispatch:
 
+# Definiert die Berechtigungen, die der Workflow benötigt
 permissions:
   contents: read
   pages: write
   id-token: write
 
+# Stellt sicher, dass immer nur ein Deployment gleichzeitig läuft
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: true
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Set Vite base for GitHub Pages
-        # Set VITE_BASE so vite.config.ts emits the correct base path
-        run: echo "VITE_BASE=/${GITHUB_REPOSITORY##*/}/" >> $GITHUB_ENV
-
-      - name: Build
-        run: npm run build
-
-      - name: Add 404.html fallback for SPA routing
-        run: |
-          cp dist/index.html dist/404.html
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
-
+  # Ein einziger Job namens 'deploy'
   deploy:
-    needs: build
-    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
     steps:
+      # 1. Schritt: Code aus dem Repository auschecken
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. Schritt: Node.js Umgebung einrichten
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18 # Du kannst hier auch 20 verwenden, je nach Projekt
+          cache: 'npm'
+
+      # 3. Schritt: Alle Projektabhängigkeiten installieren
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Schritt: Das Projekt bauen (erstellt den 'dist'-Ordner)
+      - name: Build
+        run: npm run build
+
+      # 5. Schritt: GitHub Pages für das Deployment vorbereiten
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      # 6. Schritt: Den gebauten Code ('dist'-Ordner) als Artefakt hochladen
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Hier den Ordner hochladen, der nach dem Build erstellt wird
+          path: './dist'
+
+      # 7. Schritt: Das Artefakt auf GitHub Pages veröffentlichen
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-
