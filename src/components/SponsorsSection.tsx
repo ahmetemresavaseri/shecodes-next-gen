@@ -4,12 +4,13 @@ import { Button } from "@/components/ui/button";
 
 export const SponsorsSection = () => {
   const sponsors = [
-    {
+    /*{
       name: "EY",
       // Local PNG asset for reliability
       logo: "/EY Logo.png",
       isComingSoon: false,
-    },
+    },*/
+    { name: "Coming Soon", logo: "", isComingSoon: true },
     { name: "Coming Soon", logo: "", isComingSoon: true },
     { name: "Coming Soon", logo: "", isComingSoon: true },
     { name: "Coming Soon", logo: "", isComingSoon: true },
