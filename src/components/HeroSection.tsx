@@ -1,48 +1,60 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import { GlitchText } from "@/components/GlitchText";
+import { ArrowRight, Calendar } from "lucide-react";
 import heroImage from "@/assets/hero-pixel.jpg";
 
 export const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-hero pt-16 md:pt-20 before:absolute before:inset-0 before:bg-background/5 before:pointer-events-none">
-      <div className="container mx-auto px-4 py-12 md:py-20">
-        <div className="max-w-3xl mx-auto text-center">
+    <section className="relative overflow-hidden bg-gradient-hero pt-16 md:pt-20">
+      <div className="container mx-auto px-4 py-16 md:py-24">
+        <div className="max-w-4xl mx-auto text-center">
           <div className="space-y-6 md:space-y-8 animate-fade-in">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
-              <GlitchText text="Build the Future" />
-              <br />
-              <span className="bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent animate-pulse-glow">
-                Together
-              </span>
-            </h1>
+            {/* Main Tagline */}
+            <div className="space-y-3">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white">
+                HerCode
+              </h1>
+              <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-white/95">
+                Empowering Women in Tech & Entrepreneurship
+              </p>
+            </div>
             
-            <p className="text-base md:text-lg lg:text-xl text-white/90 max-w-2xl leading-relaxed mx-auto">
-              Join a community of ambitious women supporting each other to learn, grow, and make an impact.
+            {/* Value Proposition */}
+            <p className="text-base md:text-lg lg:text-xl text-white/85 max-w-2xl leading-relaxed mx-auto">
+              A hackathon & event series for female students and aspiring founders. 
+              Join our community to learn, build, and grow together.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
+            {/* Upcoming Event Info */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+              <Calendar className="w-4 h-4 text-white" />
+              <span className="text-sm md:text-base text-white/90 font-medium">
+                Next Event: Coming Soon
+              </span>
+            </div>
+            
+            {/* Primary CTA */}
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center pt-4">
               <Button 
                 size="lg" 
-                className="group shadow-glow w-full sm:w-auto"
-                onClick={() => {
-                  const element = document.getElementById('cta');
-                  element?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                Become a Member
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="bg-white/10 border-white/20 text-white hover:bg-white/20 w-full sm:w-auto"
+                className="group bg-white text-primary hover:bg-white/90 shadow-xl text-base md:text-lg px-8 py-6 w-full sm:w-auto font-semibold"
                 onClick={() => {
                   const element = document.getElementById('events');
                   element?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
-                View Events
+                Join Our Events
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="bg-white/10 border-white/30 text-white hover:bg-white/20 w-full sm:w-auto text-base md:text-lg px-8 py-6"
+                onClick={() => {
+                  const element = document.getElementById('mission');
+                  element?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                Learn More
               </Button>
             </div>
           </div>
