@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import logo from "@/assets/hercode-logo.png";
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,19 +34,21 @@ export const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-lg"
-          : "bg-white/90 backdrop-blur-sm"
+          ? "bg-white/98 backdrop-blur-lg shadow-sm border-b border-border"
+          : "bg-white/95 backdrop-blur-md"
       }`}
     >
       <div className="container mx-auto px-3 sm:px-4">
         <div className="flex items-center justify-between h-12 sm:h-14 md:h-16">
           <div 
-            className="flex items-center gap-1 sm:gap-1.5 text-sm sm:text-base md:text-lg font-bold bg-gradient-primary bg-clip-text text-transparent cursor-pointer hover:scale-105 transition-transform"
+            className="cursor-pointer hover:opacity-80 transition-opacity"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
-            <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 text-primary animate-pixel-pop" />
-            <span>HerCode</span>
-            <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 text-primary animate-pixel-pop" />
+            <img 
+              src={logo} 
+              alt="HerCode Logo" 
+              className="h-8 sm:h-10 md:h-12 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -54,7 +57,7 @@ export const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-sm lg:text-base text-foreground/80 hover:text-primary transition-colors font-medium relative group"
+                className="text-sm lg:text-base text-foreground/70 hover:text-foreground transition-colors font-medium relative group"
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
@@ -62,7 +65,7 @@ export const Header = () => {
             ))}
             <Button
               onClick={() => scrollToSection("cta")}
-              className="shadow-glow text-xs sm:text-sm lg:text-base px-3 sm:px-4"
+              className="text-xs sm:text-sm lg:text-base px-3 sm:px-4"
               size="sm"
             >
               <span className="hidden sm:inline">Become a Member</span>
@@ -87,14 +90,14 @@ export const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left py-2 text-sm text-foreground/80 hover:text-primary transition-colors font-medium"
+                className="block w-full text-left py-2 text-sm text-foreground/70 hover:text-foreground transition-colors font-medium"
               >
                 {item.label}
               </button>
             ))}
             <Button
               onClick={() => scrollToSection("cta")}
-              className="w-full shadow-glow"
+              className="w-full"
               size="sm"
             >
               Become a Member
