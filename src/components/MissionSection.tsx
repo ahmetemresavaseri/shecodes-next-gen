@@ -9,8 +9,8 @@ export const MissionSection = () => {
     },
     {
       icon: Lightbulb,
-      title: "Creativity", 
-      description: "Fostering innovation and creative problem-solving through collaborative projects."
+      title: "Curiosity", 
+      description: "Encouraging learning, exploration, and the confidence to try something new."
     },
     {
       icon: Users,
@@ -48,13 +48,13 @@ export const MissionSection = () => {
             </h2>
             <div className="space-y-6 text-base md:text-lg text-foreground/80 leading-relaxed">
               <p>
-                HerCode started from a simple observation: <strong>women are vastly underrepresented in hackathons and the tech entrepreneurship space</strong>, yet their potential is limitless. 
+                HerCode started from a simple observation: women are vastly underrepresented in hackathons and the broader tech space, yet their potential is limitless.
               </p>
               <p>
-                We saw a gap—a lack of inclusive spaces where women could learn, build, and lead without hesitation. So we created HerCode: a community and event series dedicated to empowering female students and aspiring founders to thrive in technology and entrepreneurship.
+                Many talented women hesitate to join these environments. Not because of a lack of ability, but because they often don't see themselves represented or encouraged. HerCode was created to change that.
               </p>
-              <p className="text-lg md:text-xl font-semibold text-foreground">
-                Guided by <span className="text-primary">inclusion, creativity, and community</span>, we're building a movement where women support each other to turn ideas into impact.
+              <p>
+                We're building a space where women feel welcome to explore technology, experiment fearlessly, and grow their confidence through hands-on learning. HerCode connects ambitious, curious women who want to challenge themselves, support one another, and step boldly into the world of tech.
               </p>
             </div>
           </div>
