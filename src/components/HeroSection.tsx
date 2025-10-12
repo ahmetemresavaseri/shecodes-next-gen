@@ -20,7 +20,7 @@ export const HeroSection = () => {
             
             {/* Value Proposition */}
             <p className="text-base md:text-lg lg:text-xl text-white/85 max-w-2xl leading-relaxed mx-auto">
-              A hackathon and event series where young women explore, build, and grow in tech.
+              A hackathon and event series where young women explore, build, and grow.
             </p>
             
             {/* Upcoming Event Info */}
