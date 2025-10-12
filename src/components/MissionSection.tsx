@@ -79,7 +79,7 @@ export const MissionSection = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="relative inline-block mb-6">
-                  <div className="w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center group-hover:animate-pixel-pop transition-transform shadow-pixel-sm">
+                  <div className="w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center animate-shine-pulse transition-transform shadow-pixel-sm">
                     <value.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
