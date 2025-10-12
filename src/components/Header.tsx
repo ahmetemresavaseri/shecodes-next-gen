@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import hercodeLogo from "@/assets/hercode-logo.png";
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,14 +40,12 @@ export const Header = () => {
     >
       <div className="container mx-auto px-3 sm:px-4">
         <div className="flex items-center justify-between h-12 sm:h-14 md:h-16">
-          <div 
-            className="flex items-center gap-1 sm:gap-1.5 text-sm sm:text-base md:text-lg font-bold bg-gradient-primary bg-clip-text text-transparent cursor-pointer hover:scale-105 transition-transform"
+          <img 
+            src={hercodeLogo}
+            alt="HerCode Logo"
+            className="h-8 sm:h-10 md:h-12 w-auto cursor-pointer hover:scale-105 transition-transform"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          >
-            <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 text-primary animate-pixel-pop" />
-            <span>HerCode</span>
-            <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 text-primary animate-pixel-pop" />
-          </div>
+          />
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-4 lg:gap-8">
