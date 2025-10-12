@@ -20,8 +20,7 @@ export const HeroSection = () => {
             
             {/* Value Proposition */}
             <p className="text-base md:text-lg lg:text-xl text-white/85 max-w-2xl leading-relaxed mx-auto">
-              A hackathon & event series for female students and aspiring founders. 
-              Join our community to learn, build, and grow together.
+              A hackathon and event series where young women explore, build, and grow in tech.
             </p>
             
             {/* Upcoming Event Info */}
